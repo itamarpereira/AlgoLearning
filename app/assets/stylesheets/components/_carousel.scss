@@ -1,0 +1,24 @@
+.card-carousel-vis{
+  padding-bottom: 16px;
+  flex-direction: column;
+  width: 720px;
+  align-self: center;
+}
+
+@media (min-width: 300px) {
+  .card-carousel-vis {
+    width: 320px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-carousel-vis {
+    width: 500px;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-carousel-vis {
+    width: 720px;
+  }
+}
