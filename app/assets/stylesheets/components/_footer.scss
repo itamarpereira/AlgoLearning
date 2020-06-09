@@ -8,10 +8,9 @@ $footer_height: 160px;
   height: $footer_height;
   padding: 0px 50px;
   color: #e5e5e5;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  margin-bottom: 0px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .photo {
