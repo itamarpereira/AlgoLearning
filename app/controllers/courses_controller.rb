@@ -1,11 +1,27 @@
 class CoursesController < ApplicationController
-  before_action :set_course, only: [:show, :edit, :update, :destroy]
+	before_action :set_course, only: [:show, :edit, :update, :destroy, :visualization, :lecture, :code, :video]
 
   def index
     @courses = policy_scope(Course).order(created_at: :desc)
   end
 
   def show
+    authorize @course
+	end
+  
+  def visualization
+    authorize @course
+	end
+
+  def lecture
+    authorize @course
+  end
+
+  def video
+    authorize @course
+  end
+
+  def code
     authorize @course
   end
 
