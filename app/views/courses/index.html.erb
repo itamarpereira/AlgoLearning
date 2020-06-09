@@ -1,5 +1,7 @@
 <div class="container">
-  <%= link_to 'Add Course', new_course_path, class: "btn btn-primary" %>
+  <% if policy(Course).create? %
+   <%= link_to 'Add Course', new_course_path, class: "btn btn-primary" %>
+  <% end %>
   <h3 class="mt-4">Full List of Courses</h3> 
 	<p>If you are trying to join a good Brazillian company</p>
 

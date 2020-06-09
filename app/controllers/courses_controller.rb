@@ -1,51 +1,58 @@
 class CoursesController < ApplicationController
-	before_action :set_course, only: [:show, :edit, :update, :destroy]
+  before_action :set_course, only: [:show, :edit, :update, :destroy]
 
-	def index
-	  @courses = Course.all
-	end
+  def index
+    @courses = policy_scope(Course).order(created_at: :desc)
+  end
 
-	def show
-	end
+  def show
+    authorize @course
+  end
 
-	def new
-	  @course = Course.new
-	end
+  def new
+    @course = Course.new
+    authorize @course
+  end
 
-	def create
-	  @course = Course.new(course_params)
+
+  def create
+    @course = Course.new(course_params)
+    authorize @course
     if @course.save
       flash[:success] = "Object successfully created"
       redirect_to @course
-   	else
+    else
       flash[:error] = "Something went wrong"
       render 'new'
     end
-	end
+  end
 
-	def edit
-	end
+  def edit
+    authorize @course
+  end
 
-	def update
+  def update
+    authorize @course
     if @course.update(course_params)
       redirect_to @course, notice: 'Course Create Succesfully'
     else
       render :edit
     end
-	end
+  end
 
-	def destroy
-		@course.destroy
+  def destroy
+    @course.destroy
+    authorize @course
     redirect_to courses_url, notice: 'pet was successfully destroyed.'
-	end
+  end
 
-	private
+  private
 
-	def set_course
-		@course = Course.find(params[:id])
-	 end
+  def set_course
+    @course = Course.find(params[:id])
+  end
 
-	def course_params
-    params.require(:course).permit(:name, :description, :lecture, :code, :video, :category, :difficulty)
+  def course_params
+    params.require(:course).permit(:name, :description, :lecture, :code, :video, :category, :difficulty, :photo)
   end
 end
