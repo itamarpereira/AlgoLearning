@@ -1,7 +1,7 @@
 $footer_height: 160px;
 
 .footer {
-  background: #303960;
+  background: #202529;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,8 +13,9 @@ $footer_height: 160px;
   right: 0px;
   margin-bottom: 0px;
 }
+
 .photo {
-  
+
 }
 
 .margin-footer {
@@ -26,8 +27,26 @@ $footer_height: 160px;
   align-items: center;
 }
 .footer-links a {
-  color: #e5e5e5;
+  color: #69A297;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
+}
+
+.list-group {
+  width: 200px;
+}
+
+
+.list-group a {
+  text-decoration: none;
+  color: #69A297;
+}
+
+.list-group a:hover {
+  font-size: 18px;
+}
+
+.footer-links a:hover {
+  font-size: 32px;
 }
