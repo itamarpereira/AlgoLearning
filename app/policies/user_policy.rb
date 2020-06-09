@@ -3,9 +3,9 @@ class UserPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+  end
 
-    def dashboard?
-      true
-    end
+  def dashboard?
+    true
   end
 end
