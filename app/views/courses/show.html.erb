@@ -1,0 +1,13 @@
+<div class="container">
+  <p><%= @course.name %></p>
+  <p><%= @course.description %></p>
+  <p>Category: <%= @course.category %></p>
+  <p>Difficulty: <%= @course.difficulty %></p>
+
+  <%= link_to "Update", edit_course_path(@course), class: "btn btn-primary" %>
+
+  <%= link_to course_path(@course), class: "btn btn-primary", method: :delete, data: { confirm: 'Are you sure?' } do %>
+          Remove <i class="fas fa-trash"></i>
+        <% end %>
+    
+</div>
