@@ -1,10 +1,12 @@
 <div class="container">
-  <%= link_to 'Add Course', new_course_path, class: "btn btn-primary" %>
-  <% @courses.each do |course| %>
-    <h2><%=link_to "#{course.name}", course %></h2>
-    <%= render "courses/image", course: course, class: "image-index" %>
-    <p><%= course.description %></p>
-    <p>Category: <%= course.category %></p>
-    <p>Difficulty: <%= course.difficulty %></p>
+  <% if policy(Course).create? %>
+    <%= link_to 'Add Course', new_course_path, class: "btn btn-primary" %>
   <% end %>
+		<% @courses.each do |course| %>
+			<h2><%=link_to "#{course.name}", course %></h2>
+      <%= render "courses/image", course: course, class: "image-index" %>
+			<p><%= course.description %></p>
+			<p>Category: <%= course.category %></p>
+			<p>Difficulty: <%= course.difficulty %></p>
+		<% end %>
 </div>

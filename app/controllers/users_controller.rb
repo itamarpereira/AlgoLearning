@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   end
 
   def dashboard
+    authorize @user
   end
 
   private
