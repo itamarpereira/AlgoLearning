@@ -93,3 +93,17 @@
   background-color: rgba(8,8,8,0.3);
   border-radius: 8px;
 }
+
+.card-photo-cp {
+  width: 250px;
+  object-fit: cover;
+}
+
+.card-info {
+  margin-left: 20px;
+}
+
+.cards-course {
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
