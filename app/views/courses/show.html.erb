@@ -12,6 +12,10 @@
   <p>Difficulty: <%= @course.difficulty %></p>
 
   <% if policy(Course).create? %>
+    <%= link_to "Join Our Class", lecture_course_path, class: "btn btn-primary" %>
+  <% end %>
+
+  <% if policy(Course).create? %>
     <%= link_to "Update", edit_course_path(@course), class: "btn btn-primary" %>
   <% end %>
 
