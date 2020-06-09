@@ -5,9 +5,7 @@
       <%= cl_image_tag @course.photo.key %>
     </div>
   <% else %>
-    <div class="card-course">
-      <img src="https://images.unsplash.com/photo-1557318041-1ce374d55ebf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" />
-    </div>
+    <img class = "card-photo-cp" src="https://images.unsplash.com/photo-1557318041-1ce374d55ebf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" />
   <% end %>
   <p><%= @course.description %></p>
   <p>Category: <%= @course.category %></p>
