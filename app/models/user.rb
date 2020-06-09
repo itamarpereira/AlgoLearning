@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :progressess
   has_many :courses, through: :progressess
   has_many :comments, through: :progressess
+  has_one_attached :photo
 
   validates :username, presence: true, uniqueness: true
 end

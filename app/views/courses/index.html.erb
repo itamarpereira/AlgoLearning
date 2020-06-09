@@ -4,6 +4,7 @@
   <% end %>
 		<% @courses.each do |course| %>
 			<h2><%=link_to "#{course.name}", course %></h2>
+      <%= render "courses/image", course: course, class: "image-index" %>
 			<p><%= course.description %></p>
 			<p>Category: <%= course.category %></p>
 			<p>Difficulty: <%= course.difficulty %></p>
