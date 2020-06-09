@@ -1,12 +1,12 @@
 <div class="container">
-  <% if policy(Course).create? %
+  <% if policy(Course).create? %>
    <%= link_to 'Add Course', new_course_path, class: "btn btn-primary" %>
   <% end %>
-  <h3 class="mt-4">Full List of Courses</h3> 
+  <h3 class="mt-4">Full List of Courses</h3>
 	<p>If you are trying to join a good Brazillian company</p>
 
 	<div class="card-container">
-	
+
 		<% @courses.each do |course| %>
 			<div class= "cards-course d-flex align-items-center mb-3">
 				<div class="card-photo">
@@ -21,5 +21,5 @@
 			</div>
 		<% end %>
 	</div>
-		
+
 </div>
