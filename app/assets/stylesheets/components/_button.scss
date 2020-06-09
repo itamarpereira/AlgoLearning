@@ -43,3 +43,18 @@
   background: #6dff56;
   transition: 0.6s;
 }
+
+.btn-tag {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 2px 6px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  font-size: 12px;
+}
+
+.btn-tag:hover {
+  opacity: 1;
+}
