@@ -1,13 +1,26 @@
 <div class="container">
   <p><%= @course.name %></p>
+  <% if @course.photo.attached? %>
+    <div class="card-course">
+      <%= cl_image_tag @course.photo.key %>
+    </div>
+  <% else %>
+    <div class="card-course">
+      <img src="https://images.unsplash.com/photo-1557318041-1ce374d55ebf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" />
+    </div>
+  <% end %>
   <p><%= @course.description %></p>
   <p>Category: <%= @course.category %></p>
   <p>Difficulty: <%= @course.difficulty %></p>
 
-  <%= link_to "Update", edit_course_path(@course), class: "btn btn-primary" %>
+  <% if policy(Course).create? %>
+    <%= link_to "Update", edit_course_path(@course), class: "btn btn-primary" %>
+  <% end %>
 
-  <%= link_to course_path(@course), class: "btn btn-primary", method: :delete, data: { confirm: 'Are you sure?' } do %>
+  <% if policy(Course).create? %>
+    <%= link_to course_path(@course), class: "btn btn-primary", method: :delete, data: { confirm: 'Are you sure?' } do %>
           Remove <i class="fas fa-trash"></i>
         <% end %>
-    
+  <% end %>
+
 </div>
