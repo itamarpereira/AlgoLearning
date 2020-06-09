@@ -7,19 +7,19 @@
   align-items: center;
   width: 700px;
 }
-  
+
 .card-product img {
   height: 100%;
   width: 170px;
   object-fit: cover;
 }
-  
+
 .card-product h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
-  
+
 .card-product p {
   font-size: 12px;
   line-height: 1.4;
@@ -27,13 +27,17 @@
   margin-bottom: 0;
   margin-top: 8px;
 }
-  
+
 .card-product .card-product-infos {
   padding: 16px;
 }
 
 .card-container {
   width: 700;
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
 
 .card-list {
@@ -106,4 +110,27 @@
 .cards-course {
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.card-tag {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 2px 6px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  font-size: 12px;
+  margin: 8px;
+}
+
+.card-tag:hover {
+  opacity: 1;
+}
+.card-tag-box {
+  position: absolute;
+  right: 16px;
+  bottom: 12px;
+  display: flex;
 }

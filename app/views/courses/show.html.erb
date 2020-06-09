@@ -16,11 +16,11 @@
   <% end %>
 
   <% if policy(Course).create? %>
-    <%= link_to "Update", edit_course_path(@course), class: "btn btn-primary" %>
+    <%= link_to "Update", edit_course_path(@course), class: "card-tag" %>
   <% end %>
 
   <% if policy(Course).create? %>
-    <%= link_to course_path(@course), class: "btn btn-primary", method: :delete, data: { confirm: 'Are you sure?' } do %>
+    <%= link_to course_path(@course), class: "card-tag", method: :delete, data: { confirm: 'Are you sure?' } do %>
           Remove <i class="fas fa-trash"></i>
         <% end %>
   <% end %>

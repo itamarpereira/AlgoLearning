@@ -1,21 +1,22 @@
-<div class="container">
+<div class="container mt-3">
   <% if policy(Course).create? %>
    <%= link_to 'Add Course', new_course_path, class: "btn btn-primary" %>
   <% end %>
-  <h3 class="mt-4">Full List of Courses</h3>
-	<p>If you are trying to join a good Brazillian company</p>
 
-<div class="card-container">
-	<% @courses.each do |course| %>
-	  <div class= "cards-course d-flex align-items-center mb-3">
-			<img class="card-photo-cp" src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
-			<div class="card-info">
-				<p><%=link_to "#{course.name}", course %></p>
-				<p>Category: <%= course.category %></p>
-				<p>Difficulty: <%= course.difficulty %></p>
-			</div>
-	  </div>
-	<% end %>
-</div>
-
+  <div class="card-container">
+    <% @courses.each do |course| %>
+      <%= link_to course do %>
+        <div class= "cards-course d-flex align-items-center mb-3">
+      		<img class="card-photo-cp" src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+      		<div class="card-info">
+      			<h2><%= course.name %></h2>
+      		</div>
+          <div class="card-tag-box">
+      	    <p class="btn card-tag"><%= course.category %></p>
+      	    <p class="btn card-tag"><%= course.difficulty %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
