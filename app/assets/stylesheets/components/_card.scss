@@ -94,13 +94,16 @@
   border-radius: 8px;
 }
 
-.card-course {
-  background-size: cover;
-  height: 250px;
-  width: 200px;
+.card-photo-cp {
+  width: 250px;
+  object-fit: cover;
 }
 
-.card-course img{
-  height: 250px;
-  width: 200px;
+.card-info {
+  margin-left: 20px;
+}
+
+.cards-course {
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
