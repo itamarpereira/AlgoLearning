@@ -9,9 +9,21 @@ class CoursePolicy < ApplicationPolicy
     return true
   end
 
-  def intro?
-    return true
+  def lecture?
+    true
   end
+
+  def video?
+    true
+  end
+
+  def code?
+    true
+  end
+
+  def visualization?
+    true
+  end  
 
   def create?
     user.role == "admin"

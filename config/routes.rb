@@ -5,11 +5,13 @@ Rails.application.routes.draw do
   resources :courses do
     resources :progresses, only: :create
     resources :comments, only: [:new, :create, :index]
-    get 'visualization', to: 'courses#visualization'
-    get 'lecture', to: 'courses#lecture'
-    get 'code', to: 'courses#code'
-    get 'video', to: 'courses#video'
-    get 'intro', to: 'courses#intro'
+            
+    member do 
+      get :lecture
+      get :video
+      get :code
+      get :visualization
+    end  
   end
   resources :comments, only: :destroy
 
