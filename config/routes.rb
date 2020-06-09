@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     get 'lecture', to: 'courses#lecture'
     get 'code', to: 'courses#code'
     get 'video', to: 'courses#video'
+    get 'intro', to: 'courses#intro'
   end
   resources :comments, only: :destroy
 
