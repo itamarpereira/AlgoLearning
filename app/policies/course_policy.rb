@@ -23,7 +23,7 @@ class CoursePolicy < ApplicationPolicy
 
   def visualization?
     true
-  end  
+  end
 
   def create?
     user.role == "admin"
