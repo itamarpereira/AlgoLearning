@@ -4,16 +4,16 @@ Rails.application.routes.draw do
 
   resources :courses do
     resources :progresses, only: :create
-    resources :comments, only: [:new, :create, :index]
-            
+     
     member do 
       get :lecture
       get :video
       get :code
       get :visualization
+      get :comments
     end  
   end
-  resources :comments, only: :destroy
+  
 
   resources :users, only: [:edit, :update]
 
