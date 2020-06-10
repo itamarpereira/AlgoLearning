@@ -3,7 +3,7 @@ import Typed from 'typed.js';
 const loadDynamicBannerText = () => {
   new Typed('#banner-typed-text', {
     strings: ["AlgoLearning"],
-    typeSpeed: 50,
+    typeSpeed: 100,
     loop: true
   });
 }
