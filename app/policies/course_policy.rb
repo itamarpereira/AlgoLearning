@@ -13,6 +13,10 @@ class CoursePolicy < ApplicationPolicy
     true
   end
 
+  def comments?
+    true
+  end
+
   def video?
     true
   end
