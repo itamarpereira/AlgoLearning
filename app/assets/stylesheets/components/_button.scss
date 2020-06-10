@@ -44,6 +44,21 @@
   transition: 0.6s;
 }
 
+.btn-red {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #e51414;
+  transition: 0.6s;
+  border: 1px solid white;
+}
+
+.btn-red:hover {
+  color: white;
+  background: #ff5151;
+  transition: 0.6s;
+}
+
 .btn-tag {
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
