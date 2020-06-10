@@ -3,28 +3,28 @@
     background-position: center;
     padding: 150px 0;
   }
-  
+
   .banner h1 {
     margin: 0;
     color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
     font-size: 32px;
     font-weight: bold;
   }
-  
+
   .banner p {
     font-size: 20px;
     color: white;
     opacity: .7;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
   }
-  
+
   .banner span {
     color: white;
     font-weight: bold;
-    background-image:linear-gradient(to right, #16d6d9, #96cc29); 
-    color:rgba(0, 0, 0, 0); 
-    -webkit-background-clip:text; 
-    background-clip:text; 
+    background-image:linear-gradient(to right, #16d6d9, #96cc29);
+    color:rgba(0, 0, 0, 0);
+    -webkit-background-clip:text;
+    background-clip:text;
     position:relative;
   }
