@@ -13,16 +13,16 @@
   <p><strong>Category: </strong><%= @course.category %></p>
   <p><strong>Difficulty: </strong><%= @course.difficulty %></p>
 
-  <% if policy(Course).create? %>
-    <%= link_to "Join Our Class", lecture_course_path, class: "btn btn-primary" %>
+  <% if policy(Course).lecture? %>
+    <%= link_to "Join Our Class", lecture_course_path, class: "btn btn-blue" %>
   <% end %>
 
-  <% if policy(Course).create? %>
-    <%= link_to "Update", edit_course_path(@course), class: "card-tag" %>
+  <% if policy(Course).update? %>
+    <%= link_to "Update", edit_course_path(@course), class: "btn btn-green" %>
   <% end %>
 
-  <% if policy(Course).create? %>
-    <%= link_to course_path(@course), class: "card-tag", method: :delete, data: { confirm: 'Are you sure?' } do %>
+  <% if policy(Course).destroy? %>
+    <%= link_to course_path(@course), class: "btn btn-red", method: :delete, data: { confirm: 'Are you sure?' } do %>
           Remove <i class="fas fa-trash"></i>
         <% end %>
   <% end %>
