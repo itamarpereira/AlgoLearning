@@ -1,5 +1,6 @@
 class Course < ApplicationRecord
   has_rich_text :body
+  has_rich_text :code
 
   has_many :progressess
   has_many :users, through: :progressess
