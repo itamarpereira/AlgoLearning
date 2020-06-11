@@ -14,16 +14,53 @@ User.destroy_all
 Course.destroy_all
 puts"seeds destroyed. Creating new seeds..."
 
-User.create!(email: "vkaraujo00@gmail.com", password: '123456', username: "Viktor", role: "admin")
-User.create!(email: "player1@gmail.com", password: 'player1', username: "Player1", role: "user")
-User.create!(email: "leo@gmail.com", password: '123456', username: "Leo", role: "admin")
-User.create!(email: "flavio@gmail.com", password: '123456', username: "Flavio", role: "admin")
-User.create!(email: "itamar@gmail.com", password: '123456', username: "Itamar", role: "admin")
+# USERS
+viktor_photo = "https://avatars3.githubusercontent.com/u/63431873?s=460&u=1084b312c7083849885fae61cf7f4db400eecf7a&v=4"
+file = URI.open(viktor_photo)
+filename = File.basename(URI.parse(viktor_photo).path)
+viktor_user = User.new(email: "vkaraujo00@gmail.com", password: '123456', username: "Viktor", role: "admin")
+viktor_user.photo.attach(io: file, filename: filename)
+viktor_user.save
 
-first_photo = "https://images.unsplash.com/photo-1569605803663-e9337d901ff9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"
+player1_photo = "https://avatars0.githubusercontent.com/u/43370005?v=4"
+file = URI.open(player1_photo)
+filename = File.basename(URI.parse(player1_photo).path)
+player1_user = User.new(email: "player1@gmail.com", password: 'player1', username: "Player1", role: "user")
+player1_user.photo.attach(io: file, filename: filename)
+player1_user.save
+
+leo_photo = "https://avatars1.githubusercontent.com/u/63420973?s=460&u=024e91a4f5cd27b40a7505a159a29093c7f5fff0&v=4"
+file = URI.open(leo_photo)
+filename = File.basename(URI.parse(leo_photo).path)
+leo_user = User.new(email: "leo@gmail.com", password: '123456', username: "Leo", role: "admin")
+leo_user.photo.attach(io: file, filename: filename)
+leo_user.save
+
+flavio_photo = "https://avatars1.githubusercontent.com/u/63248684?s=460&u=6249ee3a2d72c615eee37531629411c977c4a6d9&v=4"
+file = URI.open(flavio_photo)
+filename = File.basename(URI.parse(flavio_photo).path)
+flavio_user = User.new(email: "flavio@gmail.com", password: '123456', username: "Flavio", role: "admin")
+flavio_user.photo.attach(io: file, filename: filename)
+flavio_user.save
+
+itamar_photo = "https://avatars1.githubusercontent.com/u/63616452?s=460&u=da68d777ce107ed6486fff6200d57aea1122b7f7&v=4"
+file = URI.open(itamar_photo)
+filename = File.basename(URI.parse(itamar_photo).path)
+itamar_user = User.new(email: "itamar@gmail.com", password: '123456', username: "Itamar", role: "admin")
+itamar_user.photo.attach(io: file, filename: filename)
+itamar_user.save
+
+# User.create!(email: "vkaraujo00@gmail.com", password: '123456', username: "Viktor", role: "admin")
+# User.create!(email: "player1@gmail.com", password: 'player1', username: "Player1", role: "user")
+# User.create!(email: "leo@gmail.com", password: '123456', username: "Leo", role: "admin")
+# User.create!(email: "flavio@gmail.com", password: '123456', username: "Flavio", role: "admin")
+# User.create!(email: "itamar@gmail.com", password: '123456', username: "Itamar", role: "admin")
+
+# COURSES
+first_photo = "https://d2vlcm61l7u1fs.cloudfront.net/media%2Fedb%2Fedb7c4f5-c73e-4398-a058-aa7a9cb690f6%2Fphpml3tDq.png"
 file = URI.open(first_photo)
 filename = File.basename(URI.parse(first_photo).path)
-first_course = Course.new(name: "Binary Search", video: 'https://www.youtube.com/embed/5s7_WbiR79E', description: "In computer science, binary search, also known as half-interval search, logarithmic search, or binary chop, is a search algorithm that finds the position of a target value within a sorted array. Binary search compares the target value to the middle element of the array.", category: "Binary", difficulty: "Hard")
+first_course = Course.new(name: "Matching parenthesis", video: 'https://www.youtube.com/watch?v=2X_2IdybTV0', description: "Aenean id turpis lectus. Proin fringilla lorem eget lectus vehicula, vel semper erat dapibus. Maecenas suscipit ut nunc malesuada imperdiet. Aliquam vitae venenatis nunc. Sed facilisis nibh eu accumsan euismod. Vestibulum ac sapien sed purus porttitor porttitor. Phasellus cursus nisl ac scelerisque finibus. Sed pretium sem sit amet ullamcorper dapibus. Quisque elit nisl, commodo luctus placerat in, dapibus a nulla. Suspendisse fringilla tempor massa. Morbi tincidunt, purus ac imperdiet accumsan, felis nisi ullamcorper quam, eget condimentum purus nisi eu nibh. Integer eu nisl bibendum, accumsan dui eget, feugiat nulla. Pellentesque tempus nisi ex, sed venenatis odio semper nec. Phasellus semper porta justo, blandit sollicitudin lectus fringilla a. Sed vestibulum tortor vitae ante pretium sagittis. Sed eu ultricies lacus, in hendrerit purus.", category: "Manipulators", difficulty: "Hard")
 first_course.photo.attach(io: file, filename: filename)
 first_course.save
 
@@ -76,10 +113,10 @@ eighth_course = Course.new(name: "Div Manipulation using CSS", video: 'https://w
 eighth_course.photo.attach(io: file, filename: filename)
 eighth_course.save
 
-ninth_photo = "https://d2vlcm61l7u1fs.cloudfront.net/media%2Fedb%2Fedb7c4f5-c73e-4398-a058-aa7a9cb690f6%2Fphpml3tDq.png"
+ninth_photo = "https://images.unsplash.com/photo-1569605803663-e9337d901ff9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"
 file = URI.open(ninth_photo)
 filename = File.basename(URI.parse(ninth_photo).path)
-ninth_course = Course.new(name: "Matching parenthesis", video: 'https://www.youtube.com/watch?v=2X_2IdybTV0', description: "Aenean id turpis lectus. Proin fringilla lorem eget lectus vehicula, vel semper erat dapibus. Maecenas suscipit ut nunc malesuada imperdiet. Aliquam vitae venenatis nunc. Sed facilisis nibh eu accumsan euismod. Vestibulum ac sapien sed purus porttitor porttitor. Phasellus cursus nisl ac scelerisque finibus. Sed pretium sem sit amet ullamcorper dapibus. Quisque elit nisl, commodo luctus placerat in, dapibus a nulla. Suspendisse fringilla tempor massa. Morbi tincidunt, purus ac imperdiet accumsan, felis nisi ullamcorper quam, eget condimentum purus nisi eu nibh. Integer eu nisl bibendum, accumsan dui eget, feugiat nulla. Pellentesque tempus nisi ex, sed venenatis odio semper nec. Phasellus semper porta justo, blandit sollicitudin lectus fringilla a. Sed vestibulum tortor vitae ante pretium sagittis. Sed eu ultricies lacus, in hendrerit purus.", category: "Manipulators", difficulty: "Hard")
+ninth_course = Course.new(name: "Binary Search", video: 'https://www.youtube.com/embed/5s7_WbiR79E', description: "In computer science, binary search, also known as half-interval search, logarithmic search, or binary chop, is a search algorithm that finds the position of a target value within a sorted array. Binary search compares the target value to the middle element of the array.", category: "Binary", difficulty: "Hard")
 ninth_course.photo.attach(io: file, filename: filename)
 ninth_course.save
 
