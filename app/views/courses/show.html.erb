@@ -9,8 +9,15 @@
   <p><strong>Category: </strong><%= @course.category %></p>
   <p><strong>Difficulty: </strong><%= @course.difficulty %></p>
 
-  <% if policy(Course).lecture? %>
-    <%= link_to "Join Our Class", lecture_course_path, class: "btn btn-blue" %>
+  <% if policy(Course).lecture? && @user.courses.include?(@course) %>
+    <%= link_to "Resume Our Class", lecture_course_path, class: "btn btn-blue" %>
+  <% elsif policy(Course).lecture? && policy(Progress).create? %>
+      <%= simple_form_for [@course, Progress.new] do |f| %>
+        <div class="form-actions">
+          <%= f.button :submit , value: 'Join Our Class', class: "btn btn-blue"%>
+        </div>
+      <% end %>
+  <% else %>
   <% end %>
 
   <% if policy(Course).update? %>
