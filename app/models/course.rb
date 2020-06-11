@@ -12,3 +12,4 @@ class Course < ApplicationRecord
   validates :category, presence: true
   validates :difficulty, presence: true
 end
+
