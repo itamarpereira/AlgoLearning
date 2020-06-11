@@ -2,18 +2,21 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
+  get '/about', to: 'pages#about'
+
   resources :courses do
     resources :progresses, only: :create
-     
-    member do 
+    resources :comments, only: :create
+
+    member do
       get :lecture
       get :video
       get :code
       get :visualization
       get :comments
-    end  
+    end
   end
-  
+
 
   resources :users, only: [:edit, :update]
 
