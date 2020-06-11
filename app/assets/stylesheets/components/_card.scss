@@ -1,3 +1,8 @@
+.card-big {
+  min-height: 480px;
+  padding-bottom: 16px;
+}
+
 .card-product {
   overflow: hidden;
   height: 120px;
@@ -155,4 +160,44 @@
   right: 16px;
   bottom: 12px;
   display: flex;
+}
+
+.card-learn {
+  background-color: #fff;
+  box-shadow: 1px 2px 5px 1px rgba(120,120,120,0.7);
+  padding: 40px 40px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .card-learn {
+    padding: 40px 10px;
+  }
+}
+
+.card-learn h4{
+  color: #171b2d94;
+  text-align: center;
+}
+
+.h2-learn {
+  color: #171b2d94;
+  font-size: 35px;
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 0 10px;
+}
+
+@media (max-width: 768px) {
+  .h2-learn {
+    font-size: 30px;
+  }
+}
+
+.card-learn-description{
+  color: #171b2d94;
+  margin-top: 32px;
+  height: 350px;
 }
