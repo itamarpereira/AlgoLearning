@@ -7,8 +7,10 @@ class CoursesController < ApplicationController
 
   def show
     authorize @course
+    @user = current_user
+    @progress = Progress.new
 	end
-  
+
   def comments
     authorize @course
 	end
@@ -22,6 +24,7 @@ class CoursesController < ApplicationController
   end
 
   def video
+    @comment = Comment.new
     authorize @course
   end
 

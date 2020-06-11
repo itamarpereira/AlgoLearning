@@ -1,10 +1,12 @@
 class Course < ApplicationRecord
+
   has_rich_text :body
   has_rich_text :code
 
   has_many :progressess
-  has_many :users, through: :progressess
-  has_many :comments, through: :progressess
+  has_many :users, through: :progresses
+  has_many :comments, through: :progresses
+
   has_one_attached :photo
 
   validates :name, presence: true, uniqueness: true

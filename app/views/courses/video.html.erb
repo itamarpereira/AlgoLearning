@@ -31,3 +31,28 @@
   <iframe class='videobox' src='<%= @course.video %>' frameborder='0'></iframe>
 </div>
 
+<div class="container comments-box mt-4">
+
+  <%= simple_form_for [@course, Comment.new], remote: true do |f| %>
+
+    <div class="form-inputs">
+      <%= f.input :description, label: 'New Comment:' %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit , class: "btn btn-blue"%>
+    </div>
+  <% end %>
+  <br>
+  <% if @course.comments.count != 0 %>
+    <% @course.comments.each do |comment| %>
+      <div class="comment-container">
+        <i class="author">
+          <span><%= comment.progress.user.username %></span>
+          <small><%= comment.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+        </i>
+        <p><%= comment.description %></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>
