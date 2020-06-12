@@ -1,0 +1,24 @@
+
+<div class="container" style="margin-top: 10px">
+  <div class="card" style="width: 22rem; height: 18rem">
+    <div class="container pt-20 m-auto">
+      <div class="card-body">
+        <h5 class="card-title"><%= image_tag user_image_url(current_user), class: "avatar-large" %>  <%= @user.username %></h5>
+        <div class="container dashbox">
+          <p class="card-text">Email:<%= @user.email %></p>
+          <p class="card-text">Role:<%= @user.role %></p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards">
+    <% @user.progresses.each do |progress| %>
+      <div class="card-category" style="background-color: white">
+         	<img class="card-photo-cp m-0" style='width:100%' src="<%= course_image_url(progress.course) %>" alt="">
+          <p><%= progress.course.name %> : <%= progress.status %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

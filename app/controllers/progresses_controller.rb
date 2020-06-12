@@ -4,6 +4,7 @@ class ProgressesController < ApplicationController
     @progress = Progress.new
     @progress.user = current_user
     @progress.course = @course
+    @progress.status = 'Ongoing'
     authorize @progress
     @progress.save
     redirect_to lecture_course_path(@progress.course)
