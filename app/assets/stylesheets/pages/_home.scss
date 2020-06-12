@@ -21,7 +21,7 @@
   }
 }
 
-#learn {
+#learn h2{
   color: #171b2d94;
   font-size: 35px;
   text-align: center;
@@ -30,12 +30,12 @@
 }
 
 @media (max-width: 768px) {
-  #learn {
+  #learn h2{
     font-size: 30px;
   }
 }
 
-#practice {
+#practice h2{
   color: white;
   font-size: 35px;
   text-align: center;
@@ -44,12 +44,12 @@
 }
 
 @media (max-width: 768px) {
-  #practice {
+  #practice h2{
     font-size: 30px;
   }
 }
 
-#hired {
+#hired h2{
   color: #171b2d94;
   font-size: 35px;
   text-align: center;
@@ -58,7 +58,7 @@
 }
 
 @media (max-width: 768px) {
-  #hired {
+  #hired h2{
     font-size: 30px;
   }
 }
