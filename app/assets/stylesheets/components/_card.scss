@@ -59,6 +59,10 @@
   margin-bottom: 20px;
 }
 
+.cards a{
+  text-decoration: none;
+}
+
 @media (max-width: 767px) {
   .cards {
     grid-template-columns: 1fr;
