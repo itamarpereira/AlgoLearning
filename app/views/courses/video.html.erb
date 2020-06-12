@@ -46,7 +46,7 @@
       <% @course.comments.each do |comment| %>
         <div class="comment-box">
           <div class="mr-2">
-          <%= image_tag user_image_url(current_user), class: "comment-avatar" %>
+          <%= image_tag user_image_url(comment.progress.user), class: "comment-avatar" %>
           </div>
           <div class="comment-container"><i class="author">
             <span><%= comment.progress.user.username %></span>
