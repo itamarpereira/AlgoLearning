@@ -195,11 +195,12 @@
 }
 
 .card-practice {
+  height: 100vh;
   background-color: #161B28;
   max-width: 1200px;
   border-radius: 8px;
   box-shadow: 1px 2px 5px 1px rgba(120,120,120,0.7);
-  padding: 20px 40px;
+  padding: 11px 40px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -207,7 +208,7 @@
 
 @media (max-width: 768px) {
   .card-practice {
-    padding: 40px 10px;
+    padding: 11px 10px;
   }
 }
 
@@ -219,6 +220,7 @@
 
 .card-hired {
   height: 100vh;
+  max-width: 1280px;
   background-color: #fff;
   padding: 40px 40px;
   margin: 0 auto;
