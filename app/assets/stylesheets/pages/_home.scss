@@ -21,6 +21,48 @@
   }
 }
 
+#learn {
+  color: #171b2d94;
+  font-size: 35px;
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 0 10px;
+}
+
+@media (max-width: 768px) {
+  #learn {
+    font-size: 30px;
+  }
+}
+
+#practice {
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 0 10px;
+}
+
+@media (max-width: 768px) {
+  #practice {
+    font-size: 30px;
+  }
+}
+
+#hired {
+  color: #171b2d94;
+  font-size: 35px;
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 0 10px;
+}
+
+@media (max-width: 768px) {
+  #hired {
+    font-size: 30px;
+  }
+}
+
 .action-text {
   margin-top: 10px;
   height: 500px;
