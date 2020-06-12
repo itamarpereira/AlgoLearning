@@ -10,12 +10,15 @@
   height: 480px;
 }
 
-.carousel-control-prev-icon {
-  background-color:rgba(0,0,0,0.3);
-}
+.carousel-arrow-box {
+  width: 30px;
+  height: 30px;
+  background-color:rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.carousel-control-next-icon {
-  background-color:rgba(0,0,0,0.3);
+  ;
 }
 
 @media (min-width: 300px) {
