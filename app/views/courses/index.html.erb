@@ -15,9 +15,11 @@
       		</div>
         <% end %>
         <div class="card-tag-box">
-          <p class="btn card-tag">0 Comments</p>
-    	    <p class="btn card-tag"><%= course.category %></p>
-    	    <p class="btn card-tag"><%= course.difficulty %></p>
+          <%= link_to video_course_path(course.id) do %>
+            <p class="comment-counter-box"> <%= course.comments.count %> <i class="far fa-comment-alt"></i></p>
+    	    <% end %>
+          <p class="card-tag"><%= course.category %></p>
+    	    <p class="card-tag"><%= course.difficulty %></p>
         </div>
       </div>
     <% end %>
