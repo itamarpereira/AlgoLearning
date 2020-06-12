@@ -21,6 +21,17 @@
   }
 }
 
+.container-practice {
+  position: relative;
+}
+
+.container-practice a{
+  position: absolute;
+  right: 0;
+  font-size: x-large;
+  color: #171b2d94;
+}
+
 #learn h2{
   color: #171b2d94;
   font-size: 35px;
@@ -36,7 +47,7 @@
 }
 
 #practice h2{
-  color: white;
+  color: #171b2d94;
   font-size: 35px;
   text-align: center;
   padding: 0 20px;
