@@ -7,6 +7,20 @@
   }
 }
 
+.container-learn {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 16px;
+  flex-grow: 1;
+}
+
+@media (max-width: 768px){
+  .container-learn {
+    grid-template-columns: 1fr;
+  }
+}
+
 .action-text {
   margin-top: 10px;
   height: 500px;
