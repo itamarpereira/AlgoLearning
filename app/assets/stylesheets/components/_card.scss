@@ -97,7 +97,13 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-category-home em{
+@media (max-width: 520px) {
+  .card-category-home{
+    height: 33vh;
+  }
+}
+
+.card-category-home p{
   background-color: rgba(8,8,8,0.3);
   border-radius: 8px;
 }
@@ -115,11 +121,6 @@
   text-shadow: 3px 3px 3px rgba(0,0,0,0.7);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.card-category-show em{
-  background-color: rgba(8,8,8,0.3);
-  border-radius: 8px;
 }
 
 .card-photo-cp {
@@ -185,6 +186,7 @@
 }
 
 .card-learn {
+  max-width: 1200px;
   position: relative;
   height: 100vh;
   background-color: #fff;
@@ -196,7 +198,13 @@
 
 @media (max-width: 768px) {
   .card-learn {
-    padding: 40px 10px;
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 385px) {
+  .card-learn {
+    height: 110vh;
   }
 }
 
@@ -216,6 +224,12 @@
   color: #171b2d94;
   margin-top: 80px;
   height: 300px;
+}
+
+@media (max-width: 768px){
+  .card-learn-description {
+    margin-top: 8px;
+  }
 }
 
 .card-practice {
@@ -242,10 +256,19 @@
   text-align: center;
 }
 
+@media (max-width: 768px){
+  .card-learn h4{
+    font-size: 1.3rem;
+  }
+  .card-practice h4{
+    font-size: 1.3rem;
+  }
+}
+
 .card-hired {
   position: relative;
   height: 100vh;
-  max-width: 1280px;
+  max-width: 1200px;
   background-color: #fff;
   padding: 40px 40px;
   margin: 8px auto;
