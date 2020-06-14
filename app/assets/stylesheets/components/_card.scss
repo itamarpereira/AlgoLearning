@@ -97,6 +97,12 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+@media (max-width: 520px) {
+  .card-category-home{
+    height: 33vh;
+  }
+}
+
 .card-category-home p{
   background-color: rgba(8,8,8,0.3);
   border-radius: 8px;
@@ -192,7 +198,13 @@
 
 @media (max-width: 768px) {
   .card-learn {
-    padding: 40px 10px;
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 385px) {
+  .card-learn {
+    height: 110vh;
   }
 }
 
@@ -212,6 +224,12 @@
   color: #171b2d94;
   margin-top: 80px;
   height: 300px;
+}
+
+@media (max-width: 768px){
+  .card-learn-description {
+    margin-top: 8px;
+  }
 }
 
 .card-practice {
@@ -236,6 +254,15 @@
   margin-top: 16px;
   color: #171b2d94;
   text-align: center;
+}
+
+@media (max-width: 768px){
+  .card-learn h4{
+    font-size: 1.3rem;
+  }
+  .card-practice h4{
+    font-size: 1.3rem;
+  }
 }
 
 .card-hired {
