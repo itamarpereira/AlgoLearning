@@ -125,36 +125,66 @@
 
 .card-photo-cp {
   height: 180px;
-  width: 250px;
+  width: 100%;
   object-fit: cover;
   filter: contrast(90%);
+  margin-bottom: 2px;
+}
+
+.card-photo-cp:hover {
+  filter: contrast(120%);
 }
 
 .card-info {
   margin-left: 20px;
+  height: 200px;
+  color: #202529;
+  width: 100%;
 }
 
 .cards-course {
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4px;
 }
 
 .card-tag {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
+  background-color: #4A4A4A;
+  color: white;
+  border: 2px solid #4A4A4A;
   padding: 3px 8px;
   border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.8;
   transition: opacity 0.3s ease;
   font-size: 12px;
   margin: 8px;
 }
 
+.easy {
+  background-color: #10b510;
+  color: white;
+  border: 2px solid #10b510;
+}
+
+.medium {
+  background-color: #ffae00;
+  color: white;
+  border: 2px solid #ffae00;
+}
+
+.hard {
+  background-color: #e51414;
+  color: white;
+  border: 2px solid #e51414;
+}
+
 .card-tag:hover {
   opacity: 1;
 }
+
 
 .comment-counter-box {
   color: #4A4A4A;
