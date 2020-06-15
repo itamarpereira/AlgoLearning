@@ -23,6 +23,13 @@
 
 <div class="container mt-4">
 
-  <%= @course.code %>
-  To do the exercise: <a href="https://repl.it/languages/ruby" target="_blank">Click Here</a>
+  <% @course.exercises.each do |element| %>
+  <ul>
+    <li>
+    <%= element.code%>
+    To do the exercise: <a href="https://repl.it/languages/ruby" target="_blank">Click Here</a>
+    </li>
+  </ul>
+  
+  <%end%>
 </div>

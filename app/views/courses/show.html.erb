@@ -29,4 +29,8 @@
           Remove <i class="fas fa-trash"></i>
         <% end %>
   <% end %>
+
+  <% if policy(Exercise).create? %>
+   <%= link_to 'Add Exercise', new_course_exercise_path(@course), class: "btn btn-blue" %>
+  <% end %>
 </div>
