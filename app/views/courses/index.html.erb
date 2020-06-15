@@ -4,7 +4,7 @@
   <div>
     <%= form_tag courses_path, method: :get do %>
       <%= select_tag :query, options_for_select(ActsAsTaggableOn::Tag.pluck(:name)),
-        class: "form-control select2",
+        class: "select2 inline-block",
         placeholder: "Find a course"
       %>
       <%= submit_tag "Search", class: "btn btn-primary" %>
