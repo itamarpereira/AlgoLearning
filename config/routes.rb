@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get '/about', to: 'pages#about'
-  
+
 
   resources :courses do
     resources :progresses, only: :create
@@ -18,11 +18,10 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :comments, only: :update
 
-  resources :users, only: [:edit, :update] do
-    
-  end
-    
+  resources :users, only: [:edit, :update]
+
   get '/dashboard', to: 'users#dashboard'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
