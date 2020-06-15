@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :courses do
     resources :progresses, only: :create
     resources :comments, only: [:create]
+    resources :exercises, only: [:new, :create]
 
     member do
       get :lecture

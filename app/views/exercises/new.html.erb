@@ -1,0 +1,14 @@
+<div class="container">
+
+	<%= form_with model: [@course, @exercise], local: true do |form| %>	
+			<%= form.label :code %><br>
+				<div class="lecture">
+					<%= form.rich_text_area :code, class: "action-text" %>			
+				</div><br>
+
+		<div class="form-actions">
+			<%= form.submit%>
+		</div>
+	<% end %>
+
+</div>
