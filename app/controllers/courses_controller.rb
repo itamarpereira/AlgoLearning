@@ -2,7 +2,11 @@ class CoursesController < ApplicationController
 	before_action :set_course, only: [:show, :edit, :update, :destroy, :visualization, :lecture, :code, :video]
 
   def index
-    @courses = policy_scope(Course).order(created_at: :desc)
+    if params[:query].present?
+      @courses = Course.tagged_with(params[:query])
+    else
+      @courses = policy_scope(Course).order(created_at: :desc)
+    end
   end
 
   def show
@@ -72,6 +76,6 @@ class CoursesController < ApplicationController
   end
 
   def course_params
-    params.require(:course).permit(:name, :description, :lecture, :code, :video, :category, :difficulty, :photo, :body, :short_description)
+    params.require(:course).permit(:name, :description, :lecture, :code, :video, :category, :difficulty, :photo, :body, :tag_list, :short_description)
   end
 end

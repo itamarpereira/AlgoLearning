@@ -32,6 +32,9 @@ gem 'devise'
 
 gem 'pundit'
 
+# Use acts_as_votable to provide voting system to comments
+gem 'acts_as_votable'
+
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
@@ -68,3 +71,5 @@ gem 'cloudinary', '~> 1.12.0'
 gem "actiontext", require: "action_text"
 gem "image_processing", "~> 1.2"
 
+#tags
+gem 'acts-as-taggable-on', '~> 6.0'
