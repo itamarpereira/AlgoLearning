@@ -51,7 +51,8 @@
           <div class="comment-container"><i class="author">
             <span><%= comment.progress.user.username %></span>
             <small><%= comment.created_at.in_time_zone(-3).strftime("%a %b %e at %H:%M") %></small>
-          </i>
+            <%= link_to comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' }, class: "white-box" do %>
+            <i class="fas fa-trash"></i><% end %></p>
           <p><%= comment.description %></p></div>
         </div>
       <% end %>
