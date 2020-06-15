@@ -1,4 +1,16 @@
+
+
 <div class="container mt-3">
+  <div>
+    <%= form_tag courses_path, method: :get do %>
+      <%= select_tag :query, options_for_select(ActsAsTaggableOn::Tag.pluck(:name)),
+        class: "form-control select2",
+        placeholder: "Find a course"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+  <br>
   <% if policy(Course).create? %>
    <%= link_to 'Add Course', new_course_path, class: "btn btn-blue mb-3" %>
   <% end %>

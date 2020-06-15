@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   get '/about', to: 'pages#about'
   
-
   resources :courses do
     resources :progresses, only: :create
     resources :comments, only: :create

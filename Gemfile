@@ -68,3 +68,5 @@ gem 'cloudinary', '~> 1.12.0'
 gem "actiontext", require: "action_text"
 gem "image_processing", "~> 1.2"
 
+#tags
+gem 'acts-as-taggable-on', '~> 6.0'
