@@ -50,7 +50,7 @@
           </div>
           <div class="comment-container"><i class="author">
             <span><%= comment.progress.user.username %></span>
-            <small><%= comment.created_at.in_time_zone(-3).strftime("%a %b %e at %H:%M") %></small>
+            <small><%= comment.created_at.in_time_zone(-3).strftime("%a %b %e at %H:%M") %> <i class="fas fa-caret-down" style="color: red"></i> <%= comment.vote %> <i class="fas fa-caret-up" style="color: green"></i></small>
           </i>
           <p><%= comment.description %></p></div>
         </div>
