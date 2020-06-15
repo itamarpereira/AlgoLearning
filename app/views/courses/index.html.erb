@@ -18,9 +18,9 @@
    <%= link_to 'Add Course', new_course_path, class: "btn btn-blue mb-3" %>
   <% end %>
 
-  <div class="card-container">
+  <div class="cards">
     <% @courses.each do |course| %>
-      <div class= "cards-course d-flex align-items-center mb-4">
+      <div class= "cards-course">
         <%= link_to course do %>
         	<img class="card-photo-cp" src="<%= course_image_url(course) %>" alt="">
         <% end %>
@@ -34,7 +34,13 @@
             <p class="comment-counter-box"> <%= course.comments.count %> <i class="far fa-comment-alt"></i></p>
     	    <% end %>
           <p class="card-tag"><%= course.category %></p>
-    	    <p class="card-tag"><%= course.difficulty %></p>
+    	    <% if course.difficulty == "Easy" %>
+            <p class="card-tag easy"><%= course.difficulty %></p>
+          <% elsif course.difficulty == "Medium" %>
+            <p class="card-tag medium"><%= course.difficulty %></p>
+          <% elsif course.difficulty == "Hard" %>
+            <p class="card-tag hard"><%= course.difficulty %></p>
+          <% end %>
         </div>
       </div>
     <% end %>

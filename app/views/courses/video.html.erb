@@ -5,10 +5,10 @@
 				<%= link_to "Lecture", lecture_course_path , class: "nav-link nav-link-grey" %>
         <%# <a class="nav-link nav-link-grey" href="">Lecture <span class="sr-only">(current)</span></a> %>
       </li>
-      <li class="nav-item">
+      <%# <li class="nav-item">
 				<%= link_to "Slides", visualization_course_path , class: "nav-link nav-link-grey" %>
         <%# <a class="nav-link nav-link-grey" href="#">Visualization</a> %>
-      </li>
+      <%# </li> %>
       <li class="nav-item">
 				<%= link_to "Exercise", code_course_path , class: "nav-link nav-link-grey" %>
         <%# <a class="nav-link" href="#">Exercise(Code)</a> %>
@@ -38,7 +38,7 @@
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, class: "btn btn-blue", value: "Comment" %>
+        <%= f.button :submit, class: "btn btn-blue", label: 'Comment', value: "Comment" %>
       </div>
     <% end %>
     <br>
@@ -50,8 +50,21 @@
           </div>
           <div class="comment-container"><i class="author">
             <span><%= comment.progress.user.username %></span>
-            <small><%= comment.created_at.in_time_zone(-3).strftime("%a %b %e at %H:%M") %></small>
+            <%= link_to comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' }, class: "white-box" do %>
+            <i class="fas fa-trash"></i><% end %></p>
+            <small><%= comment.created_at.in_time_zone(-3).strftime("%a %b %e at %H:%M") %>
+
+            <%= link_to comment_path(comment, vote: :upvote), method: :patch do %>
+              <i class="fas fa-caret-up" style="color: green"></i>
+            <% end %>
+            <%= comment.weighted_score %>
+            <%= link_to comment_path(comment, vote: :downvote), method: :patch do %>
+              <i class="fas fa-caret-down" style="color: red"></i>
+            <% end %>
+
+            </small>
           </i>
+
           <p><%= comment.description %></p></div>
         </div>
       <% end %>

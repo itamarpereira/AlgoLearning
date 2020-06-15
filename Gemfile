@@ -32,6 +32,9 @@ gem 'devise'
 
 gem 'pundit'
 
+# Use acts_as_votable to provide voting system to comments
+gem 'acts_as_votable'
+
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'

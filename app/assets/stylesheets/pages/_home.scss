@@ -17,7 +17,15 @@
 
 @media (max-width: 768px){
   .container-learn {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 520px){
+  .container-learn {
+    margin-top: 8px;
     grid-template-columns: 1fr;
+    grid-gap: 0;
   }
 }
 
@@ -60,6 +68,7 @@
   }
 }
 
+
 #hired h2{
   color: #171b2d94;
   font-size: 35px;
@@ -71,6 +80,18 @@
 @media (max-width: 768px) {
   #hired h2{
     font-size: 30px;
+  }
+}
+
+@media (max-width: 520px) {
+  #learn h2{
+    font-size: 27px;
+  }
+  #practice h2{
+    font-size: 27px;
+  }
+  #hired h2{
+    font-size: 27px;
   }
 }
 
@@ -87,4 +108,12 @@
 .form {
   height: 45px;
   width: 1063px;
+}
+
+.white-box {
+  color: grey;
+}
+
+.white-box:hover {
+  color: #D3D3D3;
 }
