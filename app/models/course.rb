@@ -1,11 +1,11 @@
 class Course < ApplicationRecord
 
   has_rich_text :body
-  has_rich_text :code
 
   has_many :progresses
   has_many :users, through: :progresses
   has_many :comments, through: :progresses
+  has_many :exercises
 
   has_one_attached :photo
 
