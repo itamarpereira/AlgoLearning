@@ -50,9 +50,21 @@
           </div>
           <div class="comment-container"><i class="author">
             <span><%= comment.progress.user.username %></span>
-            <small><%= comment.created_at.in_time_zone(-3).strftime("%a %b %e at %H:%M") %></small>
             <%= link_to comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' }, class: "white-box" do %>
             <i class="fas fa-trash"></i><% end %></p>
+            <small><%= comment.created_at.in_time_zone(-3).strftime("%a %b %e at %H:%M") %>
+
+            <%= link_to comment_path(comment, vote: :upvote), method: :patch do %>
+              <i class="fas fa-caret-up" style="color: green"></i>
+            <% end %>
+            <%= comment.weighted_score %>
+            <%= link_to comment_path(comment, vote: :downvote), method: :patch do %>
+              <i class="fas fa-caret-down" style="color: red"></i>
+            <% end %>
+
+            </small>
+          </i>
+
           <p><%= comment.description %></p></div>
         </div>
       <% end %>
