@@ -20,6 +20,13 @@ class CommentsController < ApplicationController
     @comment.save!
     redirect_to video_course_path(@comment.progress.course)
   end
+    
+  def destroy
+    @comment = Comment.find(params[:id])
+    authorize @comment
+    @comment.destroy
+    redirect_to video_course_path(@comment.progress.course)
+  end
 
   private
 
