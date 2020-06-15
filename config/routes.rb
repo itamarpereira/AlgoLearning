@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :courses do
     resources :progresses, only: :create
-    resources :comments, only: :create
+    resources :comments, only: [:create]
 
     member do
       get :lecture
@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   end
     
   get '/dashboard', to: 'users#dashboard'
+  resources :comments, only: [:destroy]
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
