@@ -1,13 +1,16 @@
 
 
 <div class="container mt-3">
-  <div>
+  <div class="inline-block d-flex" >
+   <div style="width: 400px" class="mr-3">
     <%= form_tag courses_path, method: :get do %>
       <%= select_tag :query, options_for_select(ActsAsTaggableOn::Tag.pluck(:name)),
-        class: "select2 inline-block",
+        class: "form-control select2",
+        multiple: "multiple",
         placeholder: "Find a course"
-      %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
+      %></div>
+      <div>
+      <%= submit_tag "Search", class: "btn btn-primary" %></div>
     <% end %>
   </div>
   <br>
@@ -37,3 +40,4 @@
     <% end %>
   </div>
 </div>
+
