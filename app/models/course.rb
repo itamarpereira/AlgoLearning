@@ -1,4 +1,5 @@
 class Course < ApplicationRecord
+  acts_as_taggable_on :tags
 
   has_rich_text :body
   has_rich_text :code
