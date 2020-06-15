@@ -22,12 +22,12 @@ viktor_user = User.new(email: "vkaraujo00@gmail.com", password: '123456', userna
 viktor_user.photo.attach(io: file, filename: filename)
 viktor_user.save
 
-player1_photo = "https://avatars0.githubusercontent.com/u/43370005?v=4"
-file = URI.open(player1_photo)
-filename = File.basename(URI.parse(player1_photo).path)
-player1_user = User.new(email: "player1@gmail.com", password: 'player1', username: "Player1", role: "user")
-player1_user.photo.attach(io: file, filename: filename)
-player1_user.save
+flaviom_photo = "https://avatars1.githubusercontent.com/u/63248684?s=460&u=6249ee3a2d72c615eee37531629411c977c4a6d9&v=4"
+file = URI.open(flaviom_photo)
+filename = File.basename(URI.parse(flaviom_photo).path)
+flaviom_user = User.new(email: "flaviom@gmail.com", password: '123456', username: "Flavio", role: "user")
+flaviom_user.photo.attach(io: file, filename: filename)
+flaviom_user.save
 
 leo_photo = "https://avatars1.githubusercontent.com/u/63420973?s=460&u=024e91a4f5cd27b40a7505a159a29093c7f5fff0&v=4"
 file = URI.open(leo_photo)
