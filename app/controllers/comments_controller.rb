@@ -8,6 +8,19 @@ class CommentsController < ApplicationController
     redirect_to video_course_path(params[:course_id])
   end
 
+  def update
+    @comment = Comment.find(params[:id])
+    # se o botao clicado foi o verde entao upvote
+    if params[:vote] == "upvote"
+      @comment.liked_by current_user
+    # se o botao clicado foi o vermelho entao downvote
+    elsif params[:vote] == "downvote"
+      @comment.disliked_by current_user
+    end
+    @comment.save!
+    redirect_to video_course_path(@comment.progress.course)
+  end
+
   private
 
   def comment_params
