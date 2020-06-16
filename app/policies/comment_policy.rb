@@ -8,4 +8,12 @@ class CommentPolicy < ApplicationPolicy
   def create?
     true
   end
+
+  def destroy?
+    user.role == "admin"
+  end
+
+  def update?
+    record.progress.user != user
+  end
 end

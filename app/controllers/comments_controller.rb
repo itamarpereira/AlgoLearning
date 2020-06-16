@@ -5,11 +5,12 @@ class CommentsController < ApplicationController
     @comment.progress = Progress.where(["course_id = ? and user_id = ?", @course, current_user.id]).first
     authorize @comment
     @comment.save
-    redirect_to video_course_path(params[:course_id])
+    redirect_to video_course_path(params[:course_id], anchor: "last_comment")
   end
 
   def update
     @comment = Comment.find(params[:id])
+    authorize @comment
     # se o botao clicado foi o verde entao upvote
     if params[:vote] == "upvote"
       @comment.liked_by current_user
@@ -18,14 +19,14 @@ class CommentsController < ApplicationController
       @comment.disliked_by current_user
     end
     @comment.save!
-    redirect_to video_course_path(@comment.progress.course)
+    redirect_to video_course_path(@comment.progress.course, anchor: "comment-#{@comment.id}")
   end
-    
+
   def destroy
     @comment = Comment.find(params[:id])
     authorize @comment
     @comment.destroy
-    redirect_to video_course_path(@comment.progress.course)
+    redirect_to video_course_path(@comment.progress.course, anchor: "last_comment")
   end
 
   private
