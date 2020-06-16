@@ -1,4 +1,52 @@
-.dashbox {
-  vertical-align: auto;
-  padding: auto;
+.dashboard-main-box {
+  display: flex;
+  flex-direction: row;
+  margin: 16px;
+  padding: 4px;
+}
+
+.profile-box {
+  height: 532px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 16px;
+  padding: 16px;
+  position: relative;
+}
+
+.avatar-dashboard {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: -28px;
+}
+
+.dsh-hr {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.achievement-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.achievement-badge:hover {
+  box-shadow: 0 0 4px rgba(0,0,0,0.4);
+  content: attr(title);
+  display: inline-block;
+  left: 0px;
+  top: 0px;
+  padding: 5px;
+  background-color: white;
+  color: black;
 }
