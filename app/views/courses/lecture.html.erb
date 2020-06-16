@@ -21,24 +21,19 @@
   </div>
 </div>
 
-
 <div class="container mt-4 d-flex justify-content-between">
   <%= @course.body %>
-  <div class="card-carousel-vis ml-2 mt-4">
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <% if @course.images.any? %>
+    <div class="card-carousel-vis ml-2 mt-4">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item">
-            <%= image_tag "img01.png", class: "flex-column" %>
-          </div>
-          <div class="carousel-item text-center active">
-            <%= image_tag "img02.png", class: "flex-column" %>
-          </div>
-          <div class="carousel-item text-center">
-            <%= image_tag "img03.png", class: "flex-column" %>
-          </div>
-          <div class="carousel-item">
-            <%= image_tag "img04.png", class: "flex-column" %>
-          </div>
+          <% @course.images.each_with_index do |image, index| %>
+            <% css_class = "carousel-item text-center active" if index == 0 %>
+            <% css_class ||= "carousel-item text-center" %>
+            <div class="<%= css_class %>">
+              <%= cl_image_tag image.key, class: "flex-column" %>
+            </div>  
+          <% end %>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
           <div class="carousel-arrow-box">
@@ -54,5 +49,5 @@
         </a>
       </div>
     </div>
-
+  <% end %>
 </div>
