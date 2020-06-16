@@ -13,7 +13,6 @@ class UsersController < ApplicationController
   end
 
   def dashboard
-    @disable_nav = true
     authorize @user
   end
 
