@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "AlgoLearning"
+meta_title: "AlgoLearning - AlgoLearning"
+meta_description: "Learn how to pass on your coding interview!"
+meta_image: "cover.jpg" # should exist in `app/assets/images/`
+twitter_account: "@AlgoLearning"   # required for Twitter Cards
