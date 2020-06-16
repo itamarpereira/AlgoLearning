@@ -9,6 +9,7 @@ class Course < ApplicationRecord
   has_many :exercises
 
   has_one_attached :photo
+  has_many_attached :images
 
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true
@@ -16,4 +17,3 @@ class Course < ApplicationRecord
   validates :difficulty, presence: true
   validates :short_description, presence: true
 end
-

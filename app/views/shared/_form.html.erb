@@ -6,6 +6,8 @@
 			<%= form.text_field :name, class: "form" %><br>
 			<%= form.label :photo %><br>
 			<%= form.file_field :photo %><br>
+			<%= form.label :images %><br>
+			<%= form.file_field :images, multiple: true %><br>
 			<%= form.label :description %><br>
 			<%= form.text_field :description, class: "form" %><br>
 			<%= form.label :short_description %><br>
