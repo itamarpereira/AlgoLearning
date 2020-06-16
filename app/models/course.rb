@@ -17,4 +17,3 @@ class Course < ApplicationRecord
   validates :difficulty, presence: true
   validates :short_description, presence: true
 end
-
