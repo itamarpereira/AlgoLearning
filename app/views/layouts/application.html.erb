@@ -14,11 +14,11 @@
   <body>
     <div id="page-container">
       <div id="content-wrap">
-        <%= render 'shared/navbar' %>
+        <%= render 'shared/navbar' unless @disable_nav %>
         <%= render 'shared/flashes' %>
 
         <%= yield %>
-        
+
         <%= yield(:after_js) %>
       </div>
     </div>
