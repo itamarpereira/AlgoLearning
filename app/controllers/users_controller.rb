@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :update, :dashboard]
+  before_action :set_user, only: [:edit, :update, :dashboard, :courses_done]
 
   def edit
   end
@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   end
 
   def dashboard
+    @disable_nav = true
     authorize @user
   end
 
