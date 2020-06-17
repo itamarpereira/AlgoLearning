@@ -1,7 +1,7 @@
 class Progress < ApplicationRecord
   belongs_to :user
   belongs_to :course
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
   STATUS = ['Not Started', 'Ongoing', 'Finished']
 
