@@ -1,6 +1,6 @@
 <div class="container mt-3">
   <div class="inline-block d-flex" >
-   <div style="width: 375px" class="mr-3">
+   <div style="width: 375px">
     <%= form_tag courses_path, method: :get do %>
       <%= select_tag :query, options_for_select(ActsAsTaggableOn::Tag.pluck(:name)),
         class: "form-control select2",
