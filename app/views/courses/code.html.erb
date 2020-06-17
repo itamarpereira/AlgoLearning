@@ -27,7 +27,15 @@
     <%number = number + 1%>
     <div class="wrap-collabsible">
       <input id="collapsible-<%=element.id%>" class="toggle" type="checkbox">
-      <label for="collapsible-<%=element.id%>" class="lbl-toggle" id="margin" tabindex="0">Exercise <%=number%> </label>
+      <label for="collapsible-<%=element.id%>" class="lbl-toggle" id="margin" tabindex="0">Exercise <%=number%> 
+      <% if element.difficulty == "Easy" %>
+            <span class="card-tag-exercise easy-exercise"><%= element.difficulty %></span>
+          <% elsif element.difficulty == "Medium" %>
+            <span class="card-tag-exercise medium-exercise"><%= element.difficulty %></span>
+          <% elsif element.difficulty == "Hard" %>
+            <span class="card-tag-exercise hard-exercise"><%= element.difficulty %></span>
+          <% end %> 
+      </label>
       <div class="collapsible-content">
         <div class="content-inner">
           <%= element.code%>

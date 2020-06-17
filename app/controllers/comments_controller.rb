@@ -4,21 +4,23 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     @comment.progress = Progress.where(["course_id = ? and user_id = ?", @course, current_user.id]).first
     authorize @comment
-    @comment.save
-    redirect_to video_course_path(params[:course_id], anchor: "last_comment")
+    if @comment.save
+      redirect_to video_course_path(params[:course_id], anchor: "last_comment")
+    else
+      flash[:alert] = "Invalid Comment"
+      render 'courses/video'
+    end
   end
 
   def update
     @comment = Comment.find(params[:id])
     authorize @comment
-    # se o botao clicado foi o verde entao upvote
     if params[:vote] == "upvote"
       @comment.liked_by current_user
-    # se o botao clicado foi o vermelho entao downvote
     elsif params[:vote] == "downvote"
       @comment.disliked_by current_user
     end
-    @comment.save!
+    @comment.save
     redirect_to video_course_path(@comment.progress.course, anchor: "comment-#{@comment.id}")
   end
 
