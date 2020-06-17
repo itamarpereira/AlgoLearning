@@ -18,30 +18,26 @@
 
   <div class="cards">
     <% @courses.each do |course| %>
-      <div class= "cards-course">
-        <%= link_to course do %>
+      <%= link_to course do %>
+        <div class= "cards-course">
         	<img class="card-photo-cp" src="<%= course_image_url(course) %>" alt="">
-        <% end %>
-        <%= link_to course do %>
-      		<div class="card-info">
+        	<div class="card-info">
       			<h2><%= course.name %></h2>
             <p><%= course.short_description %></p>
       		</div>
-        <% end %>
-        <div class="card-tag-box">
-          <%= link_to video_course_path(course.id) do %>
+          <div class="card-tag-box">
             <p class="comment-counter-box"> <%= course.comments.count %> <i class="far fa-comment-alt"></i></p>
-    	    <% end %>
-          <p class="card-tag"><%= course.category %></p>
-    	    <% if course.difficulty == "Easy" %>
-            <p class="card-tag easy"><%= course.difficulty %></p>
-          <% elsif course.difficulty == "Medium" %>
-            <p class="card-tag medium"><%= course.difficulty %></p>
-          <% elsif course.difficulty == "Hard" %>
-            <p class="card-tag hard"><%= course.difficulty %></p>
-          <% end %>
+            <p class="card-tag"><%= course.category %></p>
+      	    <% if course.difficulty == "Easy" %>
+              <p class="card-tag easy"><%= course.difficulty %></p>
+            <% elsif course.difficulty == "Medium" %>
+              <p class="card-tag medium"><%= course.difficulty %></p>
+            <% elsif course.difficulty == "Hard" %>
+              <p class="card-tag hard"><%= course.difficulty %></p>
+            <% end %>
+          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 </div>
