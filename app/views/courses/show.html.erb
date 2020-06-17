@@ -4,10 +4,12 @@
     <%= @course.name %>
     </div>
   </div>
-
-  <p><%= @course.description %></p>
-  <p><strong>Category: </strong><%= @course.category %></p>
-  <p><strong>Difficulty: </strong><%= @course.difficulty %></p>
+  <div class="p-show">
+    <p><%= @course.description %></p>
+    <p><strong>Category: </strong><%= @course.category %></p>
+    <p><strong>Difficulty: </strong><%= @course.difficulty %></p>
+  </div>
+  
 
   <% if policy(Course).lecture? && @user.courses.include?(@course) %>
     <%= link_to "Resume Our Class", lecture_course_path, class: "btn btn-blue" %>
