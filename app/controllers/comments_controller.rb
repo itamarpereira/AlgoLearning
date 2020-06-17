@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to video_course_path(params[:course_id], anchor: "last_comment")
     else
-      flash[:alert] = "Something went wrong"
+      flash[:alert] = "Invalid Comment"
       render 'courses/video'
     end
   end
