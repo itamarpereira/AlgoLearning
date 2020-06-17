@@ -167,6 +167,36 @@
   border: 2px solid #e51414;
 }
 
+.card-tag-exercise {
+  background-color: #4A4A4A;
+  color: white;
+  border: 2px solid #4A4A4A;
+  padding: 3px 8px;
+  border-radius: 50px;
+  transition: opacity 0.3s ease;
+  font-size: 12px;
+  margin: 8px;
+  width: 100px;
+}
+
+.easy-exercise {
+  background-color: #10b510;
+  color: white;
+  border: 2px solid #10b510;
+}
+
+.medium-exercise {
+  background-color: #ffae00;
+  color: white;
+  border: 2px solid #ffae00;
+}
+
+.hard-exercise {
+  background-color: #e51414;
+  color: white;
+  border: 2px solid #e51414;
+}
+
 .card-tag:hover {
   opacity: 1;
 }
