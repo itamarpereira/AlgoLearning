@@ -26,7 +26,6 @@ require("@rails/actiontext")
 // External imports
 import "bootstrap";
 import "@rails/actiontext";
-import "select2/dist/css/select2.css";
 
 
 // Internal imports, e.g:
