@@ -44,5 +44,9 @@
       </div>
     </div>
   <%end%>
-  <button type="button" class="btn btn-secondary mt-4">Complete Course</button>
+
+ 
+    <%= link_to "Conclude", course_progress_path(@course, @progress, progress: {status: "Finished"}), class: "btn btn-secondary", method: :patch  %>
+   
+
 </div>
