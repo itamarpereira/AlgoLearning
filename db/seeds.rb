@@ -166,7 +166,7 @@ file = URI.open(ninth_photo)
 filename = File.basename(URI.parse(ninth_photo).path)
 ninth_course = Course.new(name: "Binary Search", video: 'https://www.youtube.com/embed/5s7_WbiR79E', description: "In computer science, binary search, also known as half-interval search, logarithmic search, or binary chop, is a search algorithm that finds the position of a target value within a sorted array. Binary search compares the target value to the middle element of the array.", category: "Binary", difficulty: "Hard", short_description: "Binary search is an efficient algorithm for finding an item from a sorted list of items.")
 ninth_course.photo.attach(io: file, filename: filename)
-images_array = ["https://images.unsplash.com/photo-1569775309692-fd5e62248d8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"]
+images_array = ["https://hackernoon.com/hn-images/1*DOR__3reJYPwGuyytG520g.jpeg", "https://image.slidesharecdn.com/ch12searchlinearbinary-150930234148-lva1-app6891/95/linear-search-binary-search-5-638.jpg?cb=1443658121", "https://i1.faceprep.in/fp/articles/img/67031_1580367321.png", "https://miro.medium.com/max/1066/0*D_qH3srKzfov43Yl"]
 images_array.each do |image|
   img_file = URI.open(image)
   img_filename = File.basename(URI.parse(image).path)
