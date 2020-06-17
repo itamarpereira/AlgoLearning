@@ -15,6 +15,11 @@ class CoursesController < ApplicationController
     @progress = Progress.new
   end
   
+  def code
+    authorize @course
+    @progress = Progress.find_by(user_id: current_user.id, course_id: @course.id)
+  end  
+
   def visualization
     authorize @course
 	end
@@ -25,10 +30,6 @@ class CoursesController < ApplicationController
 
   def video
     @comment = Comment.new
-    authorize @course
-  end
-
-  def code
     authorize @course
   end
 
