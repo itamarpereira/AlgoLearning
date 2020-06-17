@@ -25,7 +25,7 @@ require("@rails/actiontext")
 
 // External imports
 import "bootstrap";
-import "@rails/actiontext"
+import "@rails/actiontext";
 
 
 // Internal imports, e.g:
