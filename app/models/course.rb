@@ -6,7 +6,7 @@ class Course < ApplicationRecord
   has_many :progresses
   has_many :users, through: :progresses
   has_many :comments, through: :progresses
-  has_many :exercises
+  has_many :exercises, dependent: :destroy
 
   has_one_attached :photo
   has_many_attached :images
