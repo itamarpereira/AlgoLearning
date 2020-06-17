@@ -6,7 +6,8 @@ const initSelect2 = () => {
   if (select2) {
     $('.select2').select2({
       placeholder: "Select a Tag",
-      allowClear: true
+      allowClear: true,
+      width: "360px"
     }); // (~ document.querySelectorAll)
   }
 };

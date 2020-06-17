@@ -10,7 +10,7 @@ class CommentPolicy < ApplicationPolicy
   end
 
   def destroy?
-    user.role == "admin"
+    record.progress.user == user
   end
 
   def update?

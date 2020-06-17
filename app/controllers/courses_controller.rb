@@ -15,6 +15,11 @@ class CoursesController < ApplicationController
     @progress = Progress.new
   end
   
+  def code
+    authorize @course
+    @progress = Progress.find_by(user_id: current_user.id, course_id: @course.id)
+  end  
+
   def visualization
     authorize @course
 	end
@@ -28,15 +33,10 @@ class CoursesController < ApplicationController
     authorize @course
   end
 
-  def code
-    authorize @course
-  end
-
   def new
     @course = Course.new
     authorize @course
   end
-
 
   def create
     @course = Course.new(course_params)
@@ -45,7 +45,7 @@ class CoursesController < ApplicationController
       flash[:success] = "Object successfully created"
       redirect_to @course
     else
-      flash[:error] = "Something went wrong"
+      flash[:alert] = "Something went wrong"
       render 'new'
     end
   end
