@@ -24,7 +24,6 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import { loadDynamicBannerText } from '../components/banner';
 import "@rails/actiontext"
 
 
@@ -36,7 +35,6 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initSelect2();
-  loadDynamicBannerText();
 });
 
 require("trix")
