@@ -14,7 +14,7 @@ class CoursesController < ApplicationController
     @user = current_user
     @progress = Progress.new
   end
-  
+
   def visualization
     authorize @course
 	end
@@ -37,7 +37,6 @@ class CoursesController < ApplicationController
     authorize @course
   end
 
-
   def create
     @course = Course.new(course_params)
     authorize @course
@@ -45,7 +44,7 @@ class CoursesController < ApplicationController
       flash[:success] = "Object successfully created"
       redirect_to @course
     else
-      flash[:error] = "Something went wrong"
+      flash[:alert] = "Something went wrong"
       render 'new'
     end
   end
