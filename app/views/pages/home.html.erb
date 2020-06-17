@@ -12,7 +12,11 @@
             <h1>AlgoLearning</h1>
             <p class="p-bottom"><span class="thin">Explore our</span> universe</p>
             <p>Learn how to pass on your coding interview!</p>
-            <%= link_to "Discover more", user_session_path, class: "btn btn-banner" %>
+            <% if current_user %>
+              <%= link_to "Discover more", courses_path, class: "btn btn-banner" %>
+            <% else %>
+              <%= link_to "Discover more", user_session_path, class: "btn btn-banner" %>
+            <% end %>
           </div>
       </div>
    </div>
@@ -45,13 +49,14 @@
       <div class="card-category-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)">
       </div>
       <div class="card-learn-description">
-        <p><strong>Description with relevant info:</strong>
+        <p><strong> Algorithms and Interviews:</strong>
         <br>
-         Nam et nulla sed erat accumsan ornare in sit amet sapien. Vestibulum accumsan non orci a tristique. In tempor tempor quam, eu lacinia nisi elementum a. Vestibulum nec facilisis lorem, vitae condimentum metus. Vivamus ut eleifend felis. Sed eget imperdiet enim, quis ultrices diam. Vestibulum malesuada nec nisi nec scelerisque. Suspendisse neque neque, laoreet et sem at, ultricies molestie purus.</p>
+          The typical algorithms that you would learn in data structures and algorithms class are very common in coding interviews. Showing confidence and succeding on using them can put you one step closer to getting the job you always dreamed for, so AlgoLearn provides free must-know algorithms courses to prepare the users for real coding interviews.
+        </p>
       </div>
     </div>
   </div>
-  
+
   <div id="practice" class="card-practice">
     <div class="container-practice">
       <a href="#top"><i class="fa fa-arrow-circle-up"></i></a>
@@ -60,7 +65,7 @@
       </div>
       <div class="card-category-home" style="height: 45vh; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://miro.medium.com/max/3392/0*55SzPDBcS_m_NUPT.png)">
       </div>
-      <h4>Join over 12 zillion developers and test your skills with us!</h4>
+      <h4>Join the best developers and test your skills with us!</h4>
     </div>
   </div>
 
@@ -69,7 +74,11 @@
     <h2>The Best Companies Are Waiting for You!</h2>
     <div class="container-hired">
       <div class="card-category-home-hired" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1538688423619-a81d3f23454b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)">
+      <% if current_user %>
+        <%= link_to "Boost Confidence Now!", courses_path, class: "btn btn-banner" %>
+      <% else %>
         <%= link_to "Boost Confidence Now!", user_session_path, class: "btn btn-banner" %>
+      <% end %>
       </div>
     </div>
   </div>
@@ -91,7 +100,7 @@
     <a href="#">Web Development</a>
     <a href="#">Data Science</a>
   </div>
-  
+
   <div class="list-group">
     <h3>Languages</h3>
 
