@@ -17,6 +17,18 @@
         <% end %>
       </div>
         
+      <div class="courses-section">
+        <div class="chat-section-header">
+          <h3>Other courses</h3>
+        </div>
+        <% @courses.each do |course| %>
+          <%= link_to course do %>
+            <div class="channel-b">            
+              <p><i class="fa fa-circle-thin"></i> <%= course.name %></p>
+            </div>
+          <% end %>
+        <% end %>        
+      </div>
       
     </div>
     <div class="w-75">
