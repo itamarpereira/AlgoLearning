@@ -12,8 +12,10 @@
     </ul>
 </div>
 
-<div class="container mt-4 d-flex justify-content-between">
-  <%= @course.body %>
+<div class="container mt-4 d-flex justify-content-around lecture-masterBoard">
+  <div class="lecture-board">
+    <%= @course.body %>
+  </div>
   <% if @course.images.any? %>
     <div class="card-carousel-vis ml-2 mt-4">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
