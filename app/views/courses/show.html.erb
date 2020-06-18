@@ -1,37 +1,73 @@
-<div class="container mt-4 w-50">
-  <div class="container w-75 mb-3">
-    <div class="card-category-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= course_image_url(@course) %>')">
-    <%= @course.name %>
+<div class="container mt-4 w-75">
+  <div class="d-flex">
+    <div class="sidebar-courses">
+      <h1>Courses</h1>
+      <span><%= @user.username %></span>
+      
+      <div class="courses-section">
+        <div class="chat-section-header">
+          <h3>Enrolled</h3>
+        </div>
+        <% @user.progresses.each do |progress| %>
+          <%= link_to progress.course do %>
+            <div class="channel">
+              <span><i class="fa fa-circle"></i> <%= progress.course.name %></span>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+        
+      <div class="courses-section">
+        <div class="chat-section-header">
+          <h3>Other courses</h3>
+        </div>
+        <% @courses.each do |course| %>
+          <%= link_to course do %>
+            <div class="channel-b">            
+              <p><i class="fa fa-circle-thin"></i> <%= course.name %></p>
+            </div>
+          <% end %>
+        <% end %>        
+      </div>
+      
+    </div>
+    <div class="w-75">
+      <div class="container w-100 mb-3">
+        <div class="card-category-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= course_image_url(@course) %>')">
+        <%= @course.name %>
+        </div>
+      </div>
+      <div class="p-show">
+        <p><%= @course.description %></p>
+        <p><strong>Category: </strong><%= @course.category %></p>
+        <p><strong>Difficulty: </strong><%= @course.difficulty %></p>
+      </div>
+      
+    
+      <% if policy(Course).lecture? && @user.courses.include?(@course) %>
+        <%= link_to "Resume Our Class", lecture_course_path, class: "btn btn-blue" %>
+      <% elsif policy(Course).lecture? && policy(Progress).create? %>
+          <%= simple_form_for [@course, Progress.new] do |f| %>
+            <div class="form-actions">
+              <%= f.button :submit , value: 'Join Our Class', class: "btn btn-blue"%>
+            </div>
+          <% end %>
+      <% else %>
+      <% end %>
+    
+      <% if policy(Course).update? %>
+        <%= link_to "Update", edit_course_path(@course), class: "btn btn-green" %>
+      <% end %>
+    
+      <% if policy(Course).destroy? %>
+        <%= link_to course_path(@course), class: "btn btn-red", method: :delete, data: { confirm: 'Are you sure?' } do %>
+              Remove <i class="fas fa-trash"></i>
+            <% end %>
+      <% end %>
+    
+      <% if policy(Exercise).create? %>
+      <%= link_to 'Add Exercise', new_course_exercise_path(@course), class: "btn btn-blue" %>
+      <% end %>
     </div>
   </div>
-  <div class="p-show">
-    <p><%= @course.description %></p>
-    <p><strong>Category: </strong><%= @course.category %></p>
-    <p><strong>Difficulty: </strong><%= @course.difficulty %></p>
-  </div>
-
-  <% if policy(Course).lecture? && @user.courses.include?(@course) %>
-    <%= link_to "Resume Our Class", lecture_course_path, class: "btn btn-blue" %>
-  <% elsif policy(Course).lecture? && policy(Progress).create? %>
-      <%= simple_form_for [@course, Progress.new] do |f| %>
-        <div class="form-actions">
-          <%= f.button :submit , value: 'Join Our Class', class: "btn btn-blue"%>
-        </div>
-      <% end %>
-  <% else %>
-  <% end %>
-
-  <% if policy(Course).update? %>
-    <%= link_to "Update", edit_course_path(@course), class: "btn btn-green" %>
-  <% end %>
-
-  <% if policy(Course).destroy? %>
-    <%= link_to course_path(@course), class: "btn btn-red", method: :delete, data: { confirm: 'Are you sure?' } do %>
-          Remove <i class="fas fa-trash"></i>
-        <% end %>
-  <% end %>
-
-  <% if policy(Exercise).create? %>
-   <%= link_to 'Add Exercise', new_course_exercise_path(@course), class: "btn btn-blue" %>
-  <% end %>
 </div>
