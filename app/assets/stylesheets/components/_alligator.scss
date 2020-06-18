@@ -3,18 +3,15 @@ input[type='checkbox'] {
 }
 
 .lbl-toggle {
-  display: block;
 
   font-weight: bold;
   font-family: monospace;
   font-size: 1.2rem;
   text-transform: uppercase;
-  text-align: center;
-
+  width: 100%;
   padding: 1rem;
-
   color: black;
-  background: white;
+  
 
   cursor: pointer;
 
@@ -71,7 +68,8 @@ input[type='checkbox'] {
 }
 
 .wrap-collabsible {
-	border: 1px solid #ccc!important;
+  border: 1px solid #ccc!important;
+  background: white;
 }
 
 #margin {
