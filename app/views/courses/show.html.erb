@@ -1,12 +1,11 @@
 <div class="container mt-4 w-75">
   <div class="d-flex">
     <div class="sidebar-courses">
-      <h1>Courses</h1>
-      <span><%= @user.username %></span>
+      <h2>Courses</h2>
       
       <div class="courses-section">
         <div class="chat-section-header">
-          <h3>Enrolled</h3>
+          <h4>Enrolled</h4>
         </div>
         <% @user.progresses.each do |progress| %>
           <%= link_to progress.course do %>
@@ -19,11 +18,11 @@
         
       <div class="courses-section">
         <div class="chat-section-header">
-          <h3>Other courses</h3>
+          <h4>Other courses</h4>
         </div>
         <% @courses.each do |course| %>
           <%= link_to course do %>
-            <div class="channel-b">            
+            <div class="channel">            
               <span><i class="fa fa-circle"></i> <%= course.name %></span>
             </div>
           <% end %>
