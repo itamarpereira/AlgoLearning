@@ -3,7 +3,20 @@
     <div class="sidebar-courses">
       <h1>Courses</h1>
       <span><%= @user.username %></span>
-
+      
+      <div class="courses-section">
+        <div class="chat-section-header">
+          <h3>Enrolled</h3>
+        </div>
+        <% @user.progresses.each do |progress| %>
+          <%= link_to progress.course do %>
+            <div class="channel">
+              <span><i class="fa fa-circle"></i> <%= progress.course.name %></span>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+        
       
     </div>
     <div class="w-75">
