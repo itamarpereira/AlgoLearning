@@ -11,7 +11,7 @@
         <% @user.progresses.each do |progress| %>
           <%= link_to progress.course do %>
             <div class="channel">
-              <span><i class="fa fa-circle"></i> <%= progress.course.name %></span>
+              <span><i class="fa fa-play-circle"></i> <%= progress.course.name %></span>
             </div>
           <% end %>
         <% end %>
@@ -24,7 +24,7 @@
         <% @courses.each do |course| %>
           <%= link_to course do %>
             <div class="channel-b">            
-              <p><i class="fa fa-circle-thin"></i> <%= course.name %></p>
+              <p><i class="fa fa-circle"></i> <%= course.name %></p>
             </div>
           <% end %>
         <% end %>        
