@@ -4,7 +4,7 @@
   color: white;
   padding: 16px;
   width: 200px;
-  margin-right: 8px
+  margin-right: 12px
 }
 
 .courses-section {
@@ -12,6 +12,7 @@
 }
 
 .courses-section a{
+  color: rgba(224, 224, 224, 0.58);
   text-decoration: none;
 }
 
@@ -22,4 +23,8 @@
 
 .channel-b {
   text-align: center;
+}
+
+.fa-circle {
+  font-size: smaller;
 }
