@@ -12,10 +12,12 @@
     </ul>
 </div>
 
-<div class="container mt-4 d-flex justify-content-between">
+<div class="m-4 d-flex justify-content-between">
+  <div class="text-justify">
   <%= @course.body %>
+  </div>
   <% if @course.images.any? %>
-    <div class="card-carousel-vis ml-2 mt-4">
+    <div class="card-carousel-vis my-3 ml-4 ">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <% @course.images.each_with_index do |image, index| %>
