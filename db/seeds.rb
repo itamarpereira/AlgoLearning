@@ -9,6 +9,7 @@ require 'open-uri'
 OpenURI::Buffer.send :remove_const, 'StringMax' if OpenURI::Buffer.const_defined?('StringMax')
 OpenURI::Buffer.const_set 'StringMax', 0
 
+
 puts"destroying the seeds..."
 User.destroy_all
 Course.destroy_all
@@ -175,3 +176,7 @@ end
 ninth_course.save
 
 puts"seeds created! Done!"
+
+
+
+
