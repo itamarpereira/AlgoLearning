@@ -82,6 +82,20 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+.card-category-learn {
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 520px) {
+  .card-category-learn{
+    height: 33vh;
+  }
+}
+
 .card-category-dashboard {
   background-size: cover;
   background-position: center;
@@ -279,6 +293,16 @@
 @media (max-width: 768px){
   .card-learn-description {
     margin-top: 8px;
+  }
+}
+
+.card-learn-description p{
+  font-size: 1rem
+}
+
+@media (min-width: 950px){
+  .card-learn-description p{
+    font-size: 1.3rem
   }
 }
 
