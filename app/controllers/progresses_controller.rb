@@ -15,7 +15,7 @@ class ProgressesController < ApplicationController
     @progress = Progress.find(params[:id])
     authorize @progress
     @progress.update(progress_params)
-    redirect_to lecture_course_path(@progress.course)
+    redirect_to dashboard_path
   end
 
   private

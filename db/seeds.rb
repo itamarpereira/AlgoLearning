@@ -60,7 +60,7 @@ itamar_user.save
 first_photo = "https://res.cloudinary.com/dhk8ebunw/image/upload/v1592419374/tech01_sxtg6x.png"
 file = URI.open(first_photo)
 filename = File.basename(URI.parse(first_photo).path)
-first_course = Course.new(name: "Matching parenthesis", video: 'https://www.youtube.com/watch?v=2X_2IdybTV0', description: "Aenean id turpis lectus. Proin fringilla lorem eget lectus vehicula, vel semper erat dapibus. Maecenas suscipit ut nunc malesuada imperdiet. Aliquam vitae venenatis nunc. Sed facilisis nibh eu accumsan euismod. Vestibulum ac sapien sed purus porttitor porttitor. Phasellus cursus nisl ac scelerisque finibus. Sed pretium sem sit amet ullamcorper dapibus. Quisque elit nisl, commodo luctus placerat in, dapibus a nulla. Suspendisse fringilla tempor massa. Morbi tincidunt, purus ac imperdiet accumsan, felis nisi ullamcorper quam, eget condimentum purus nisi eu nibh. Integer eu nisl bibendum, accumsan dui eget, feugiat nulla. Pellentesque tempus nisi ex, sed venenatis odio semper nec. Phasellus semper porta justo, blandit sollicitudin lectus fringilla a. Sed vestibulum tortor vitae ante pretium sagittis. Sed eu ultricies lacus, in hendrerit purus.", category: "Manipulators", difficulty: "Hard", short_description: "Matching parenthesis, also known as brace matching or parentheses matching, is a syntax that highlights matching sets of brackets.")
+first_course = Course.new(name: "Matching parenthesis", video: 'https://www.youtube.com/embed/1kseKf5HAaM', description: "A classic problem — Check for balanced parentheses in an expression. Two brackets are considered to be a matched pair if the an opening bracket (i.e., (, [, or { ) occurs to the left of a closing bracket (i.e., ), ], or }) of the exact same type. There are three types of matched pairs of brackets: [], {}, and (). Ex: Write a balancedParenthesis function that takes a string as input and returns a boolean — if the parentheses in the input string are ‘balanced’, then return true, else return false. For example, the program should print true for exp = “[()]{}{[()()]()}” and false for exp = “[(])”.", category: "Manipulators", difficulty: "Hard", short_description: "Matching parenthesis, also known as brace matching or parentheses matching, is a syntax that highlights matching sets of brackets.", tag_list: "Manipulators, Hard")
 first_course.photo.attach(io: file, filename: filename)
 images_array = ["https://images.unsplash.com/photo-1569775309692-fd5e62248d8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"]
 images_array.each do |image|
@@ -73,7 +73,7 @@ first_course.save
 second_photo = "https://res.cloudinary.com/dhk8ebunw/image/upload/v1592422889/tech02_wr4omy.png"
 file = URI.open(second_photo)
 filename = File.basename(URI.parse(second_photo).path)
-second_course = Course.new(name: "Array Manipulation", video: 'https://www.youtube.com/watch?v=TZI5cAV0BOo', description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum non turpis sed convallis. Nullam volutpat pretium suscipit. Aenean id tortor sit amet nulla aliquam ullamcorper. Aliquam posuere tincidunt malesuada. Integer tempor nibh sed arcu tristique, nec mollis nisl fermentum. Maecenas consectetur pharetra gravida. Suspendisse nisi velit, tincidunt a volutpat eu, vehicula non tortor. Vivamus eget mauris non erat condimentum faucibus vel non urna. Duis nec leo a enim gravida mattis. Aenean porttitor urna sem. Duis massa nibh, pellentesque quis mi in, placerat commodo risus.",category: "Manipulators", difficulty: "Easy", short_description: "A way to manipulate data using strings or numbers inside a collection.")
+second_course = Course.new(name: "Array Manipulation", video: 'https://www.youtube.com/embed/VzQ2KacyDLw', description: "Arrays are sequences of numerical data, with each element having the same underlying data type – integers, real (floating point) numbers, or complex numbers. Of course, arrays are very important for scientific data, and the majority of data you will be manipulating with Larch will be in the form of arrays. Larch depends on the numpy library for providing basic array data types and the methods for fast manipulation of array data. These arrays can be multi-dimensional, have their dimensionality change dynamically, an can be sliced (subsets of elements taken). Many built-in functions will act on the whole array, generally element-by-element, in a highly efficient way, greatly reducing the need to “loop over” elements.",category: "Manipulators", difficulty: "Easy", short_description: "A way to manipulate data using strings or numbers inside a collection.", tag_list: "Manipulators, Easy")
 second_course.photo.attach(io: file, filename: filename)
 images_array = ["https://images.unsplash.com/photo-1569775309692-fd5e62248d8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"]
 images_array.each do |image|
@@ -86,7 +86,7 @@ second_course.save
 third_photo = "https://res.cloudinary.com/dhk8ebunw/image/upload/v1592423025/tech03_i2ja1i.png"
 file = URI.open(third_photo)
 filename = File.basename(URI.parse(third_photo).path)
-third_course = Course.new(name: "OOP", video: 'https://www.youtube.com/watch?v=t4382UVl0oc', description: "Aenean id turpis lectus. Proin fringilla lorem eget lectus vehicula, vel semper erat dapibus. Maecenas suscipit ut nunc malesuada imperdiet. Aliquam vitae venenatis nunc. Sed facilisis nibh eu accumsan euismod. Vestibulum ac sapien sed purus porttitor porttitor. Phasellus cursus nisl ac scelerisque finibus. Sed pretium sem sit amet ullamcorper dapibus. Quisque elit nisl, commodo luctus placerat in, dapibus a nulla. Suspendisse fringilla tempor massa. Morbi tincidunt, purus ac imperdiet accumsan, felis nisi ullamcorper quam, eget condimentum purus nisi eu nibh. Integer eu nisl bibendum, accumsan dui eget, feugiat nulla. Pellentesque tempus nisi ex, sed venenatis odio semper nec. Phasellus semper porta justo, blandit sollicitudin lectus fringilla a. Sed vestibulum tortor vitae ante pretium sagittis. Sed eu ultricies lacus, in hendrerit purus.", category: "Objects", difficulty: "Medium", short_description: "Object-oriented programming (OOP) refers to a type of computer programming (software design) in which programmers define the data type of a data structure.")
+third_course = Course.new(name: "OOP", video: 'https://www.youtube.com/embed/xoL6WvCARJY', description: "Object-oriented programming (OOP) is a programming paradigm based on the concept of objects, which can contain data, in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods). A feature of objects is an object's procedures that can access and often modify the data fields of the object with which they are associated (objects have a notion of this or self). In OOP, computer programs are designed by making them out of objects that interact with one another.[1][2] OOP languages are diverse, but the most popular ones are class-based, meaning that objects are instances of classes, which also determine their types.", category: "Objects", difficulty: "Medium", short_description: "Object-oriented programming (OOP) refers to a type of computer programming (software design) in which programmers define the data type of a data structure.", tag_list: "Objects, Medium")
 third_course.photo.attach(io: file, filename: filename)
 images_array = ["https://images.unsplash.com/photo-1569775309692-fd5e62248d8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"]
 images_array.each do |image|
@@ -99,7 +99,7 @@ third_course.save
 fourth_photo = "https://res.cloudinary.com/dhk8ebunw/image/upload/v1592423197/tech04_cntsmd.png"
 file = URI.open(fourth_photo)
 filename = File.basename(URI.parse(fourth_photo).path)
-fourth_course = Course.new(name: "Path Finding", video: 'https://www.youtube.com/watch?v=UwLtyvGdNbc', description: "Cras interdum gravida feugiat. Nulla quam eros, lacinia consequat varius vel, imperdiet vel neque. Nam et nulla sed erat accumsan ornare in sit amet sapien. Vestibulum accumsan non orci a tristique. In tempor tempor quam, eu lacinia nisi elementum a. Vestibulum nec facilisis lorem, vitae condimentum metus. Vivamus ut eleifend felis. Sed eget imperdiet enim, quis ultrices diam. Vestibulum malesuada nec nisi nec scelerisque. Suspendisse neque neque, laoreet et sem at, ultricies molestie purus. Nulla fermentum lorem at nisl rhoncus, eget posuere ex sollicitudin. Aliquam porta orci tincidunt dolor rutrum aliquam. Nulla facilisi. Aliquam pretium a ipsum nec molestie. Pellentesque non diam a mauris egestas pellentesque quis non diam. In ac quam quis mauris feugiat sagittis non non ante.", category: "Finding", difficulty: "Hard", short_description: "A pathfinding method searches a graph by starting at one vertex and exploring adjacent nodes until the destination node is reached.")
+fourth_course = Course.new(name: "Path Finding", video: 'https://www.youtube.com/embed/-L-WgKMFuhE', description: "At its core, a pathfinding method searches a graph by starting at one vertex and exploring adjacent nodes until the destination node is reached, generally with the intent of finding the cheapest route. Although graph searching methods such as a breadth-first search would find a route if given enough time, other methods, which explore the graph, would tend to reach the destination sooner. An analogy would be a person walking across a room; rather than examining every possible route in advance, the person would generally walk in the direction of the destination and only deviate from the path to avoid an obstruction, and make deviations as minor as possible", category: "Finding", difficulty: "Hard", short_description: "A pathfinding method searches a graph by starting at one vertex and exploring adjacent nodes until the destination node is reached.", tag_list: "Finding, Hard")
 fourth_course.photo.attach(io: file, filename: filename)
 images_array = ["https://images.unsplash.com/photo-1569775309692-fd5e62248d8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"]
 images_array.each do |image|
@@ -112,7 +112,10 @@ fourth_course.save
 fifth_photo = "https://res.cloudinary.com/dhk8ebunw/image/upload/v1592423550/tech05_wtyauy.png"
 file = URI.open(fifth_photo)
 filename = File.basename(URI.parse(fifth_photo).path)
-fifth_course = Course.new(name: "Sort", video: 'https://www.youtube.com/watch?v=DelhLppPSxY', description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum non turpis sed convallis. Nullam volutpat pretium suscipit. Aenean id tortor sit amet nulla aliquam ullamcorper. Aliquam posuere tincidunt malesuada. Integer tempor nibh sed arcu tristique, nec mollis nisl fermentum. Maecenas consectetur pharetra gravida. Suspendisse nisi velit, tincidunt a volutpat eu, vehicula non tortor. Vivamus eget mauris non erat condimentum faucibus vel non urna. Duis nec leo a enim gravida mattis. Aenean porttitor urna sem. Duis massa nibh, pellentesque quis mi in, placerat commodo risus.", category: "Sorting", difficulty: "Hard", short_description: "Sort is a series of instructions that takes an array as input, performs specified operations on the array, sometimes called a list, and outputs a sorted array.")
+fifth_course = Course.new(name: "Sort", video: 'https://www.youtube.com/embed/4Q72kbwyEmk', description: "In computer science, a sorting algorithm is an algorithm that puts elements of a list in a certain order. The most frequently used orders are numerical order and lexicographical order. Efficient sorting is important for optimizing the efficiency of other algorithms (such as search and merge algorithms) that require input data to be in sorted lists. Sorting is also often useful for canonicalizing data and for producing human-readable output. More formally, the output of any sorting algorithm must satisfy two conditions:
+The output is in nondecreasing order (each element is no smaller than the previous element according to the desired total order);
+The output is a permutation (a reordering, yet retaining all of the original elements) of the input.
+Further, the input data is often stored in an array, which allows random access, rather than a list, which only allows sequential access; though many algorithms can be applied to either type of data after suitable modification.", category: "Sorting", difficulty: "Hard", short_description: "Sort is a series of instructions that takes an array as input, performs specified operations on the array, sometimes called a list, and outputs a sorted array.", tag_list: "Sorting, Hard")
 fifth_course.photo.attach(io: file, filename: filename)
 images_array = ["https://images.unsplash.com/photo-1569775309692-fd5e62248d8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"]
 images_array.each do |image|
@@ -125,7 +128,9 @@ fifth_course.save
 sixth_photo = "https://res.cloudinary.com/dhk8ebunw/image/upload/v1592423579/tech06_nkck7c.png"
 file = URI.open(sixth_photo)
 filename = File.basename(URI.parse(sixth_photo).path)
-sixth_course = Course.new(name: "String Manipulation", video: 'https://www.youtube.com/watch?v=o_l4Ab5FRwM', description: "Aenean id turpis lectus. Proin fringilla lorem eget lectus vehicula, vel semper erat dapibus. Maecenas suscipit ut nunc malesuada imperdiet. Aliquam vitae venenatis nunc. Sed facilisis nibh eu accumsan euismod. Vestibulum ac sapien sed purus porttitor porttitor. Phasellus cursus nisl ac scelerisque finibus. Sed pretium sem sit amet ullamcorper dapibus. Quisque elit nisl, commodo luctus placerat in, dapibus a nulla. Suspendisse fringilla tempor massa. Morbi tincidunt, purus ac imperdiet accumsan, felis nisi ullamcorper quam, eget condimentum purus nisi eu nibh. Integer eu nisl bibendum, accumsan dui eget, feugiat nulla. Pellentesque tempus nisi ex, sed venenatis odio semper nec. Phasellus semper porta justo, blandit sollicitudin lectus fringilla a. Sed vestibulum tortor vitae ante pretium sagittis. Sed eu ultricies lacus, in hendrerit purus.", category: "Manipulators", difficulty: "Easy", short_description: "String manipulation (or string handling) is the process of changing, parsing, splicing, pasting, or analyzing strings.")
+sixth_course = Course.new(name: "String Manipulation", video: 'https://www.youtube.com/embed/gXhDAJ2TcLY', description: "String manipulation (or string handling) is the process of changing, parsing, splicing, pasting, or analyzing strings. String manipulation typically comes as a mechanism or a library feature of in most programming languages.
+
+Typically, most programming languages provide a string data type that holds a sequence of characters. Such types often expose a set of functions and various other low-level functionality for manipulating the contained characters.", category: "Manipulators", difficulty: "Easy", short_description: "String manipulation (or string handling) is the process of changing, parsing, splicing, pasting, or analyzing strings.", tag_list: "Manipulators, Easy")
 sixth_course.photo.attach(io: file, filename: filename)
 images_array = ["https://images.unsplash.com/photo-1569775309692-fd5e62248d8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"]
 images_array.each do |image|
@@ -138,7 +143,12 @@ sixth_course.save
 seventh_photo = "https://res.cloudinary.com/dhk8ebunw/image/upload/v1592427639/tech07_utw0vw.png"
 file = URI.open(seventh_photo)
 filename = File.basename(URI.parse(seventh_photo).path)
-seventh_course = Course.new(name: "Div Manipulation", video: 'https://www.youtube.com/watch?v=SBjQ9tuuTJQ', description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum non turpis sed convallis. Nullam volutpat pretium suscipit. Aenean id tortor sit amet nulla aliquam ullamcorper. Aliquam posuere tincidunt malesuada. Integer tempor nibh sed arcu tristique, nec mollis nisl fermentum. Maecenas consectetur pharetra gravida. Suspendisse nisi velit, tincidunt a volutpat eu, vehicula non tortor. Vivamus eget mauris non erat condimentum faucibus vel non urna. Duis nec leo a enim gravida mattis. Aenean porttitor urna sem. Duis massa nibh, pellentesque quis mi in, placerat commodo risus.", category: "Manipulators", difficulty: "Easy", short_description: "Div Manipulation is a way to interact tables with each other and create a few features for example cards.")
+seventh_course = Course.new(name: "Div Manipulation", video: 'https://www.youtube.com/embed/kGA9RIFiyIE', description: "The div tag is used to specify a section within an HTML document. Anything from text to images to videos can be placed within a div. Divs are similar to tables but they are easier to use, customizable with CSS, and load faster than tables. Divs also make it easier for search engine spiders to “crawl” or examine a website – making your website easier to find via Google.
+
+
+Div ID vs. Class
+
+Beginning web designers sometimes wonder what the difference is between div id and div class. Div id should be used to identify a single element that appears only once within a document. Div class should be used to identify elements that appear more than once within a document. For example, let’s say that you have an HTML document that uses a div for the header and a div to contain each image. Since the header will only appear once you might code", category: "Manipulators", difficulty: "Easy", short_description: "Div Manipulation is a way to interact tables with each other and create a few features for example cards." , tag_list: "Manipulators, Easy")
 seventh_course.photo.attach(io: file, filename: filename)
 images_array = ["https://images.unsplash.com/photo-1569775309692-fd5e62248d8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"]
 images_array.each do |image|
@@ -151,7 +161,12 @@ seventh_course.save
 eighth_photo = "https://res.cloudinary.com/dhk8ebunw/image/upload/v1592427653/tech08_nzy17d.png"
 file = URI.open(eighth_photo)
 filename = File.basename(URI.parse(eighth_photo).path)
-eighth_course = Course.new(name: "Div Manipulation (CSS)", video: 'https://www.youtube.com/embed/kGA9RIFiyIE', description: "Cras interdum gravida feugiat. Nulla quam eros, lacinia consequat varius vel, imperdiet vel neque. Nam et nulla sed erat accumsan ornare in sit amet sapien. Vestibulum accumsan non orci a tristique. In tempor tempor quam, eu lacinia nisi elementum a. Vestibulum nec facilisis lorem, vitae condimentum metus. Vivamus ut eleifend felis. Sed eget imperdiet enim, quis ultrices diam. Vestibulum malesuada nec nisi nec scelerisque. Suspendisse neque neque, laoreet et sem at, ultricies molestie purus. Nulla fermentum lorem at nisl rhoncus, eget posuere ex sollicitudin. Aliquam porta orci tincidunt dolor rutrum aliquam. Nulla facilisi. Aliquam pretium a ipsum nec molestie. Pellentesque non diam a mauris egestas pellentesque quis non diam. In ac quam quis mauris feugiat sagittis non non ante.", category: "Manipulators", difficulty: "Medium", short_description: "Div Manipulation using CSS it's a to make a table interact with each other but using CSS and the position tools to help you.")
+eighth_course = Course.new(name: "Div Manipulation (CSS)", video: 'https://www.youtube.com/embed/kGA9RIFiyIE', description: "The div tag is used to specify a section within an HTML document. Anything from text to images to videos can be placed within a div. Divs are similar to tables but they are easier to use, customizable with CSS, and load faster than tables. Divs also make it easier for search engine spiders to “crawl” or examine a website – making your website easier to find via Google.
+
+
+Div ID vs. Class
+
+Beginning web designers sometimes wonder what the difference is between div id and div class. Div id should be used to identify a single element that appears only once within a document. Div class should be used to identify elements that appear more than once within a document. For example, let’s say that you have an HTML document that uses a div for the header and a div to contain each image. Since the header will only appear once you might code", category: "Manipulators", difficulty: "Medium", short_description: "Div Manipulation using CSS it's a to make a table interact with each other but using CSS and the position tools to help you.", tag_list: "Manipulators, Medium")
 eighth_course.photo.attach(io: file, filename: filename)
 images_array = ["https://images.unsplash.com/photo-1569775309692-fd5e62248d8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"]
 images_array.each do |image|
@@ -161,17 +176,64 @@ images_array.each do |image|
 end
 eighth_course.save
 
+tenth_photo = "https://res.cloudinary.com/dmcepupsl/image/upload/v1592487463/tech1_ajzybs.jpg"
+file = URI.open(tenth_photo)
+filename = File.basename(URI.parse(tenth_photo).path)
+tenth_course = Course.new(name: "Reverse Link List", video: 'https://www.youtube.com/embed/O0By4Zq0OFc', description: "A common interview question asked at larger companies, reversing a linked list is a problem I’ve seen trip up a lot of engineers throughout my time at Outco.
+Often being unable to solve this problem stems from an engineer not being familiar with what linked lists are ahead of time, or not understanding the difference between a linked list and an array. 
+There are two common erroneous approaches I see that on the surface seem to work.
+The first is to start from the head and the tail, and swap the elements in the list, as if you were operating on an array. This would be done with two pointers, and after a swap the front pointer would move up and the rear pointer would move back. This would continue until the two pointers meet in the middle.", category: "Manipulators", difficulty: "Medium", short_description: "Div Manipulation using CSS it's a to make a table interact with each other but using CSS and the position tools to help you.", tag_list: "Manipulators, Medium")
+tenth_course.photo.attach(io: file, filename: filename)
+images_array = ["https://images.unsplash.com/photo-1569775309692-fd5e62248d8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"]
+images_array.each do |image|
+  img_file = URI.open(image)
+  img_filename = File.basename(URI.parse(image).path)
+  tenth_course.images.attach(io: img_file, filename: img_filename)
+end
+tenth_course.save
+
+
+
+eleventh_photo = "https://res.cloudinary.com/dmcepupsl/image/upload/v1592487570/tech2_sydagz.jpg"
+file = URI.open(eleventh_photo)
+filename = File.basename(URI.parse(eleventh_photo).path)
+eleventh_course = Course.new(name: "Tree traversal", video: 'https://www.youtube.com/embed/BHB0B1jFKQc', description: "In computer science, tree traversal (also known as tree search and walking the tree) is a form of graph traversal and refers to the process of visiting (checking and/or updating) each node in a tree data structure, exactly once. Such traversals are classified by the order in which the nodes are visited. The following algorithms are described for a binary tree, but they may be generalized to other trees as well.", category: "Manipulators", difficulty: "Medium", short_description: "In computer science, tree traversal  is a form of graph traversal and refers to the process of visiting each node in a tree data structure.", tag_list: "Manipulators, Medium")
+eleventh_course.photo.attach(io: file, filename: filename)
+images_array = ["https://images.unsplash.com/photo-1569775309692-fd5e62248d8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"]
+images_array.each do |image|
+  img_file = URI.open(image)
+  img_filename = File.basename(URI.parse(image).path)
+  eleventh_course.images.attach(io: img_file, filename: img_filename)
+end
+eleventh_course.save
+
+
+
+twelfth_photo = "https://res.cloudinary.com/dmcepupsl/image/upload/v1592487616/tech3_ovzgsr.jpg"
+file = URI.open(twelfth_photo)
+filename = File.basename(URI.parse(twelfth_photo).path)
+twelfth_course = Course.new(name: "Recursive function", video: 'https://www.youtube.com/embed/ggk7HbcnLG8', description: "In computer science, recursion is a method of solving a problem where the solution depends on solutions to smaller instances of the same problem. Such problems can generally be solved by iteration, but this needs to identify and index the smaller instances at programming time. At the opposite, recursion solves such recursive problems by using functions that call themselves from within their own code. The approach can be applied to many types of problems, and recursion is one of the central ideas of computer science.", category: "Manipulators", difficulty: "Medium", short_description: "A recursive function is a function that calls itself during its execution. This enables the function to repeat itself several times.", tag_list: "Manipulators, Medium")
+twelfth_course.photo.attach(io: file, filename: filename)
+images_array = ["https://images.unsplash.com/photo-1569775309692-fd5e62248d8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"]
+images_array.each do |image|
+  img_file = URI.open(image)
+  img_filename = File.basename(URI.parse(image).path)
+  twelfth_course.images.attach(io: img_file, filename: img_filename)
+end
+twelfth_course.save
+
 ninth_photo = "https://res.cloudinary.com/dhk8ebunw/image/upload/v1592427663/tech09_uu8ys5.png"
 file = URI.open(ninth_photo)
 filename = File.basename(URI.parse(ninth_photo).path)
-ninth_course = Course.new(name: "Binary Search", video: 'https://www.youtube.com/embed/T2sFYY-fT5o', description: "In computer science, binary search, also known as half-interval search, logarithmic search, or binary chop, is a search algorithm that finds the position of a target value within a sorted array. Binary search compares the target value to the middle element of the array.", category: "Binary", difficulty: "Hard", short_description: "Binary search is an efficient algorithm for finding an item from a sorted list of items.")
+ninth_course = Course.new(name: "Binary Search", video: 'https://www.youtube.com/embed/T2sFYY-fT5o', description: "In computer science, binary search, also known as half-interval search, logarithmic search, or binary chop, is a search algorithm that finds the position of a target value within a sorted array. Binary search compares the target value to the middle element of the array.", category: "Binary", difficulty: "Hard", short_description: "Binary works on sorted arrays and search begins by comparing an element in the middle of the array with the target value.", tag_list: "Binary, Hard")
 ninth_course.photo.attach(io: file, filename: filename)
-images_array = ["https://hackernoon.com/hn-images/1*DOR__3reJYPwGuyytG520g.jpeg", "https://image.slidesharecdn.com/ch12searchlinearbinary-150930234148-lva1-app6891/95/linear-search-binary-search-5-638.jpg?cb=1443658121", "https://i1.faceprep.in/fp/articles/img/67031_1580367321.png", "https://miro.medium.com/max/1066/0*D_qH3srKzfov43Yl"]
+images_array = ["https://1.bp.blogspot.com/-bc0aOmFA_Z0/Waq9rrwc46I/AAAAAAAACGY/phucI7gnsFUg32i2gOGtKUVsk_wNBXUowCLcBGAs/s1600/given-sorted-array-search-element-using-binary-search.png", "https://image.slidesharecdn.com/ch12searchlinearbinary-150930234148-lva1-app6891/95/linear-search-binary-search-5-638.jpg?cb=1443658121", "https://i1.faceprep.in/fp/articles/img/67031_1580367321.png", "https://miro.medium.com/max/1066/0*D_qH3srKzfov43Yl"]
 images_array.each do |image|
   img_file = URI.open(image)
   img_filename = File.basename(URI.parse(image).path)
   ninth_course.images.attach(io: img_file, filename: img_filename)
 end
 ninth_course.save
+
 
 puts"seeds created! Done!"
