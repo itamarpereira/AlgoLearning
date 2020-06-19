@@ -1,0 +1,35 @@
+.sidebar-courses {
+  border-radius: 8px;
+  background-color: #202529;
+  color: white;
+  padding: 16px;
+  width: 25%;
+  margin-right: 12px
+}
+
+.courses-section {
+  margin-top: 24px;
+}
+
+.courses-section a{
+  color: rgba(224, 224, 224, 0.58);
+  text-decoration: none;
+}
+
+.courses-section a:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.channel {
+  display: flex;
+  align-items: center;
+}
+
+.channel span {
+  margin-top: 8px;
+}
+
+.fa-circle {
+  font-size: smaller;
+}

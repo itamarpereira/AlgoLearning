@@ -10,6 +10,8 @@ class CoursesController < ApplicationController
   end
 
   def show
+    @courses = policy_scope(Course).order(created_at: :desc).limit(10) - current_user.courses
+
     authorize @course
     @user = current_user
     @progress = Progress.new
